@@ -86,3 +86,20 @@
 .social h3 {
   font-size: 1.5rem;
 }
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
