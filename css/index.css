@@ -41,3 +41,28 @@
 .nav-links:hover {
   text-decoration: underline;
 }
+
+/* Styling for the hero section */
+.hero {
+  grid-area: hero;
+  color: black;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero-content {
+  /* breakpoint */
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
