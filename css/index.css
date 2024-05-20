@@ -38,7 +38,7 @@
   gap: 3rem;
 }
 
-.nav-links:hover {
+.nav-link:hover {
   text-decoration: underline;
 }
 
@@ -101,5 +101,6 @@
 }
 
 .footer-link:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
