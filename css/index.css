@@ -17,3 +17,27 @@
     "socials"
     "footer";
 }
+
+/* Styling for the header and navigation */
+.header {
+  grid-area: header;
+  padding: 1rem;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav-links:hover {
+  text-decoration: underline;
+}
