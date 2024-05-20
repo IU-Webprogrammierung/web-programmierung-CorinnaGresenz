@@ -1,6 +1,36 @@
 /* Basic reset and box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-gallery-container {
+  /* background: url("../img/background.jpg") center/cover no-repeat; */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "hero"
+    "socials"
+    "footer";
+}
+
+.image-gallery {
+  padding-top: 4rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.image-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+}
