@@ -24,6 +24,12 @@
   padding: 1rem;
 }
 
+.logo-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
 .navbar {
   display: grid;
   grid-template-columns: auto 1fr;
