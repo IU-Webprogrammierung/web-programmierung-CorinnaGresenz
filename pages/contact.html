@@ -6,6 +6,7 @@
     <title>Kontakt</title>
     <link rel="stylesheet" href="../css/contact.css" />
     <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/javascript.js" defer></script>
   </head>
   <body>
     <!-- Main container for the landing page -->
@@ -28,26 +29,34 @@
                 >
               </li>
               <li>
-                <a class="nav-link current-page"  href="./contact.html">Kontakt</a>
+                <a class="nav-link current-page" href="./contact.html"
+                  >Kontakt</a
+                >
               </li>
             </ul>
           </nav>
         </div>
       </header>
 
-      <!-- Hero section with a call to action -->
-      <section class="hero">
-        <div class="hero-content">
-          <h2>Willkommen auf meiner Kontakt Page</h2>
-          <p>
-            Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt
-            Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt
-            Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt
-            Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt Kontakt
-            Kontakt Kontakt Kontakt Kontakt
-          </p>
-        </div>
-      </section>
+      <!-- Contact Form -->
+      <div class="contact-container">
+        <h1>Kontaktformular</h1>
+        <form action="#" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">E-Mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject">Betreff:</label>
+          <input type="text" id="subject" name="subject" required />
+
+          <label for="message">Nachricht:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button id="submitButton" type="button">Absenden</button>
+        </form>
+      </div>
 
       <!-- Footer section with additional links and information -->
       <footer class="footer">
@@ -56,7 +65,5 @@
         <a class="footer-link">AGB</a>
       </footer>
     </div>
-
-    <script src="../js/javascript.js" defer />
   </body>
 </html>
