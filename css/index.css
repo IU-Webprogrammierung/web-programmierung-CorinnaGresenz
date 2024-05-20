@@ -24,6 +24,11 @@
   padding: 1rem;
 }
 
+.current-page {
+  /* border-bottom: 1px solid black; */
+  text-decoration: underline;
+}
+
 .logo-link {
   color: black;
   text-decoration: none;
@@ -45,6 +50,10 @@
 }
 
 .nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.current-page {
   text-decoration: underline;
 }
 
