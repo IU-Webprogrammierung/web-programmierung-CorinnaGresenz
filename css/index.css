@@ -72,3 +72,17 @@
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+
+/* Styling for the features section */
+.socials {
+  grid-area: socials;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.social h3 {
+  font-size: 1.5rem;
+}
