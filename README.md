@@ -7,6 +7,7 @@ Dieses Projekt ist eine einfache Webseite namens "AI by Cora", die mit HTML, CSS
 ## Inhaltsverzeichnis
 
 1. [Projektstruktur](#projektstruktur)
+2. [Verwendete Technologien](#verwendete-technologien)
 
 ## Projektstruktur
 
@@ -35,3 +36,9 @@ web-programmierung-CorinnaGresenz/
 ├── index.html
 └── README.md
 ```
+
+## Verwendete Technologien
+
+- HTML5
+- CSS3
+- JavaScript
