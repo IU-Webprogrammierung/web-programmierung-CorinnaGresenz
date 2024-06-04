@@ -8,6 +8,7 @@ Dieses Projekt ist eine einfache Webseite namens "AI by Cora", die mit HTML, CSS
 
 1. [Projektstruktur](#projektstruktur)
 2. [Verwendete Technologien](#verwendete-technologien)
+3. [Installation](#installation)
 
 ## Projektstruktur
 
@@ -42,3 +43,19 @@ web-programmierung-CorinnaGresenz/
 - HTML5
 - CSS3
 - JavaScript
+
+## Installation
+
+Klone das Repository:
+
+```bash
+git clone https://github.com/username/web-programmierung-CorinnaGresenz.git
+```
+
+Navigiere in das Projektverzeichnis:
+
+```bash
+cd web-programmierung-CorinnaGresenz
+```
+
+Öffne die `index.html` Datei in deinem bevorzugten Browser.
