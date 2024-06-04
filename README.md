@@ -10,6 +10,8 @@ Dieses Projekt ist eine einfache Webseite namens "AI by Cora", die mit HTML, CSS
 2. [Verwendete Technologien](#verwendete-technologien)
 3. [Installation](#installation)
 4. [Nutzung](#nutzung)
+5. [Seitenbeschreibung](#seitenbeschreibung)
+6. [Autor](#autor)
 
 ## Projektstruktur
 
@@ -69,3 +71,25 @@ Nach der Installation kannst du die Webseite lokal in deinem Browser öffnen, in
 - Über mich
 - Bildergalerie
 - Kontakt
+
+### Seitenbeschreibung
+
+#### Startseite (`index.html`)
+
+Enthält eine Willkommensnachricht und Links zu sozialen Medien.
+
+#### Über mich (`pages/about-me.html`)
+
+Beinhaltet eine persönliche Vorstellung und ein Bild.
+
+#### Bildergalerie (`pages/image-gallery.html`)
+
+Zeigt eine Galerie von AI-generierten Bildern.
+
+#### Kontakt (`pages/contact.html`)
+
+Ein einfaches Kontaktformular zur Erfassung von Namen, E-Mail und Nachrichten.
+
+### Autor
+
+Corinna Gresenz
