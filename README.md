@@ -9,6 +9,7 @@ Dieses Projekt ist eine einfache Webseite namens "AI by Cora", die mit HTML, CSS
 1. [Projektstruktur](#projektstruktur)
 2. [Verwendete Technologien](#verwendete-technologien)
 3. [Installation](#installation)
+4. [Nutzung](#nutzung)
 
 ## Projektstruktur
 
@@ -59,3 +60,12 @@ cd web-programmierung-CorinnaGresenz
 ```
 
 Öffne die `index.html` Datei in deinem bevorzugten Browser.
+
+### Nutzung
+
+Nach der Installation kannst du die Webseite lokal in deinem Browser öffnen, indem du die `index.html` Datei öffnest. Von dort aus kannst du zu den verschiedenen Unterseiten navigieren:
+
+- Startseite
+- Über mich
+- Bildergalerie
+- Kontakt
