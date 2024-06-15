@@ -1,0 +1,18 @@
+// main.scss
+
+/* Basic reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import "variables";
+@import "mixins";
+@import "grid";
+@import "global-theme";
+
+@import "./index/index.scss";
+@import "./image-gallery/image-gallery.scss";
+@import "./about-me/about-me.scss";
+@import "./contact/contact.scss";

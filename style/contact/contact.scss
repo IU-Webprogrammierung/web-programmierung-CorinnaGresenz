@@ -1,0 +1,60 @@
+// Import variables and mixins if needed
+@import '../variables';
+@import '../mixins';
+
+/* Basic reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact-container {
+  width: 75%;
+  margin: spacing-constant(50) auto; // Adjust based on your spacing strategy
+  padding: spacing-constant(20); // Adjust based on your spacing strategy
+  background-color: $color-background-paper; // Assuming you have a variable for background color
+  box-shadow: 0 0 spacing-constant(10) rgba(0, 0, 0, 0.1); // Adjust based on your spacing strategy
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: $color-text-primary; // Assuming you have a variable for text color
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: spacing-constant(10); // Adjust based on your spacing strategy
+  color: $color-text-secondary; // Assuming you have a variable for secondary text color
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: spacing-constant(10); // Adjust based on your spacing strategy
+  margin-top: spacing-constant(5); // Adjust based on your spacing strategy
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: $font-size-base; // Assuming you have a variable for base font size
+  width: 100%;
+}
+
+button {
+  margin-top: spacing-constant(20); // Adjust based on your spacing strategy
+  padding: spacing-constant(10); // Adjust based on your spacing strategy
+  border: none;
+  border-radius: 4px;
+  background-color: $color-success-main; // Assuming you have a variable for success color
+  color: #fff;
+  font-size: $font-size-base; // Assuming you have a variable for base font size
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-success-dark; // Assuming you have a variable for darker shade of success color
+  }
+}

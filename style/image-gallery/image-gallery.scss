@@ -1,3 +1,7 @@
+// Import variables and mixins if needed
+@import '../variables';
+@import '../mixins';
+
 /* Basic reset and box-sizing */
 * {
   margin: 0;
@@ -18,8 +22,8 @@
 }
 
 .image-gallery {
-  padding-top: 4rem;
-  gap: 1rem;
+  padding-top: spacing-constant(16); // Assuming you want to use your spacing strategy
+  gap: spacing-function(1); // Assuming you want to use your spacing function
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -33,4 +37,12 @@
 .image {
   width: 400px;
   height: 400px;
+}
+
+// Example of using variables and mixins for padding in .image-gallery-container
+.image-gallery-container {
+  padding-top: spacing-constant(16); // Assuming 16 is defined in your spacing strategy
+  @include respond-to(sm) {
+    padding-top: spacing-constant(20); // Adjusted value for small screens
+  }
 }

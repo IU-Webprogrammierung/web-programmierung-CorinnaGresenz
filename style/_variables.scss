@@ -1,0 +1,68 @@
+// _variables.scss
+
+// Color Palette
+$color-primary: #000; // Purple
+$color-secondary: #FEBCB0; // Yellow
+$color-primary-light: lighten($color-primary, 20%);
+$color-primary-dark: darken($color-primary, 20%);
+$color-secondary-light: lighten($color-secondary, 20%);
+$color-secondary-dark: darken($color-secondary, 20%);
+
+// Additional Colors
+$color-success-main: #2e7d32;
+$color-success-light: #4caf50;
+$color-success-dark: #1b5e20;
+$color-success-contrast: #fff;
+
+$color-error-main: #d32f2f;
+$color-error-light: #e57373;
+$color-error-dark: #c62828;
+$color-error-contrast: #fff;
+
+$color-warning-main: #ffa000;
+$color-warning-light: #ffb74d;
+$color-warning-dark: #ff6f00;
+$color-warning-contrast: #000;
+
+$color-info-main: #0288d1;
+$color-info-light: #03a9f4;
+$color-info-dark: #01579b;
+$color-info-contrast: #fff;
+
+// Text Colors
+$color-text-primary: rgba(0, 0, 0, 0.87);
+$color-text-secondary: rgba(0, 0, 0, 0.6);
+$color-text-disabled: rgba(0, 0, 0, 0.38);
+$color-text-divider: rgba(0, 0, 0, 0.12);
+
+// Background Colors
+$color-background-paper: #fff;
+$color-background-default: #fff;
+
+// Typography
+$font-primary: 'Helvetica Neue', Arial, sans-serif;
+$font-secondary: 'Georgia', serif;
+
+$font-size-base: 16px;
+$font-size-lg: 1.25rem;
+$font-size-md: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-xs: 0.75rem;
+
+$line-height-base: 1.5;
+$line-height-lg: 1.75;
+$line-height-md: 1.5;
+$line-height-sm: 1.25;
+$line-height-xs: 1.2;
+
+// Spacing Strategies
+$spacing-unit: 4px;
+$spacing-function: 0.25rem;
+$spacing-array: (0, 4px, 8px, 16px, 32px, 64px);
+
+// Breakpoints
+$breakpoint-xs: 0px;
+$breakpoint-sm: 600px;
+$breakpoint-md: 900px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1536px;
