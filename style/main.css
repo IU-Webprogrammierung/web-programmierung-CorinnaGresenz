@@ -7,7 +7,6 @@
 
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 8pxpx;
 }
@@ -101,10 +100,11 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 1.75;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: 8pxpx;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -163,25 +163,33 @@ body2 {
   margin-bottom: 4px;
 }
 
-.button {
-  font-size: 0.875rem;
-  line-height: 1.25;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 4pxpx 8pxpx;
-  border-radius: 4px;
+button {
+  min-width: 140px;
+  border: 2px solid #FEBCB0;
   background-color: #000;
+  color: white;
+  border-radius: 0.9em;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all ease-in-out 0.2s;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 400ms;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  color: white;
+}
+button:hover {
+  color: black;
+}
+button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  border: none;
 }
-.button:hover {
-  background-color: black;
-}
-.button--secondary {
-  background-color: #FEBCB0;
-}
-.button--secondary:hover {
-  background-color: #fd674b;
+button:hover {
+  background-color: transparent;
 }
 
 .caption {
@@ -202,11 +210,11 @@ body2 {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
-  background-color: #fff;
+  background-color: #FEBCB0;
 }
 
 p {
@@ -252,7 +260,6 @@ p {
   min-height: 100vh;
   grid-template-areas: "header" "hero" "socials" "footer";
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 8pxpx;
 }
@@ -297,7 +304,7 @@ p {
 .navbar {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: baseline;
+  align-items: center;
 }
 
 .nav-links {
@@ -318,7 +325,6 @@ p {
 
 .nav-links a {
   font-size: 24px;
-  color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -536,7 +542,7 @@ p {
   width: 75%;
   margin: 200pxpx auto;
   padding: 80pxpx;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.12);
   box-shadow: 0 0 40pxpx rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -567,7 +573,7 @@ textarea {
   width: 100%;
 }
 
-button {
+.submit-button {
   margin-top: 80pxpx;
   padding: 40pxpx;
   border: none;
@@ -577,7 +583,7 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
-button:hover {
+.submit-button:hover {
   background-color: #1b5e20;
 }
 
