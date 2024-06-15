@@ -1,0 +1,240 @@
+/* Basic reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8pxpx;
+}
+@media (min-width: 600px) {
+  .container {
+    padding: 16pxpx;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 32px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    padding: 64px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -spacing-constant(2);
+  margin-right: -spacing-constant(2);
+}
+
+.col {
+  padding-left: 8pxpx;
+  padding-right: 8pxpx;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.75;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 1.75;
+  font-weight: 700;
+  margin-bottom: 8pxpx;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 4pxpx;
+}
+
+h5 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.subtitle1 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 4pxpx;
+}
+
+.subtitle2 {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+body1 {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+body2 {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.button {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4pxpx 8pxpx;
+  border-radius: 4px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+.button:hover {
+  background-color: black;
+}
+.button--secondary {
+  background-color: #FEBCB0;
+}
+.button--secondary:hover {
+  background-color: #fd674b;
+}
+
+.caption {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 4pxpx;
+}
+
+.overline {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+}
+
+p {
+  margin-bottom: 8pxpx;
+}
+
+.container {
+  padding: 8pxpx;
+}
+@media (min-width: 600px) {
+  .container {
+    padding: 16pxpx;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    padding: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 32px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    padding: 64px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
