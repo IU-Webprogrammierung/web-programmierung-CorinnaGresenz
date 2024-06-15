@@ -1,3 +1,8 @@
+// _grid.scss
+
+@import "../variables";
+@import "../mixins";
+
 /* Basic reset and box-sizing */
 * {
   margin: 0;
@@ -16,6 +21,26 @@
     "hero"
     "socials"
     "footer";
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: spacing-constant(2); // Adjust based on your spacing strategy
+
+  @include respond-to(sm) {
+    padding: spacing-constant(4);
+  }
+
+  @include respond-to(md) {
+    padding: spacing-function(4);
+  }
+
+  @include respond-to(lg) {
+    padding: spacing-array(4);
+  }
+
+  @include respond-to(xl) {
+    padding: spacing-array(5);
+  }
 }
 
 /* Styling for the header and navigation */
@@ -89,7 +114,7 @@
   margin-bottom: 2rem;
 }
 
-/* Styling for the features section */
+/* Styling for the socials section */
 .socials {
   grid-area: socials;
   display: grid;
@@ -110,6 +135,7 @@
   transition: color 0.3s;
 }
 
+/* Styling for the footer section */
 .footer {
   grid-area: footer;
   display: flex;
@@ -126,4 +152,20 @@
 .footer-link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/* Your grid columns setup */
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include make-col($i);
+  }
+}
+
+.row {
+  @include make-row;
+}
+
+.col {
+  @include make-gutter;
+  box-sizing: border-box;
 }
