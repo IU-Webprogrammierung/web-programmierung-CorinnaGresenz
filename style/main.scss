@@ -11,3 +11,8 @@
 @import "mixins";
 @import "grid";
 @import "global-theme";
+
+@import "./index/index.scss";
+@import "./image-gallery/image-gallery.scss";
+@import "./about-me/about-me.scss";
+@import "./contact/contact.scss";
