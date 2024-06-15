@@ -22,7 +22,6 @@
     "socials"
     "footer";
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: spacing-constant(2); // Adjust based on your spacing strategy
 
@@ -63,7 +62,7 @@
 .navbar {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: baseline;
+  align-items: center;
 }
 
 .nav-links {
@@ -84,7 +83,6 @@
 
 .nav-links a {
   font-size: 24px;
-  color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
