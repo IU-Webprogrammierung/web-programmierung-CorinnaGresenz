@@ -3,7 +3,7 @@
 @import 'variables';
 
 @function spacing-constant($factor) {
-  @return #{$spacing-unit * $factor}px;
+  @return #{$spacing-unit * $factor};
 }
 
 @function spacing-function($factor) {

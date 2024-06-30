@@ -9,28 +9,13 @@
   box-sizing: border-box;
 }
 
+.about-me-hero-title {
+  display: block;
+}
+
 .about-me-hero-content {
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  gap: spacing-function(1); // Assuming you want to use your spacing function
   display: flex;
-  padding: 0 spacing-constant(30); // Adjust based on your spacing strategy
-  text-align: start;
-}
-
-.about-me-hero-content h2 {
-  font-weight: 500;
-}
-
-.about-me-hero-content h4 {
-  font-size: 24px;
-  font-weight: 300;
-  padding: spacing-constant(32) 0; // Adjust based on your spacing strategy
-}
-
-.about-me-hero-content p {
-  font-size: spacing-constant(20); // Adjust based on your spacing strategy
-  font-weight: 300;
-  font-size: spacing-constant(12); // Adjust based on your spacing strategy
+  align-items: center;
+  /* breakpoint */
+  max-width: 1200px;
 }

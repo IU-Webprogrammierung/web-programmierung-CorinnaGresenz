@@ -1,6 +1,6 @@
 // Global SASS Theme
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 // Breakpoints
 $breakpoint-xs: 0px; // Extra small devices (portrait phones, less than 600px)
@@ -18,17 +18,19 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem; // 32px
+  font-size: 3em; // 32px
   line-height: $line-height-lg;
-  font-weight: 700;
+  font-weight: 300;
   margin-bottom: spacing-constant(2); // 8px
+  text-transform: uppercase;
 }
 
 h3 {
-  font-size: 1.75rem; // 28px
+  font-size: 2.5rem; // 32px
   line-height: $line-height-md;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: spacing-array(2); // 8px
+  text-transform: uppercase;
 }
 
 h4 {
@@ -66,41 +68,37 @@ h6 {
   margin-bottom: spacing-function(1); // 0.25rem
 }
 
-body1 {
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  font-weight: 400;
-  margin-bottom: spacing-array(2); // 8px
-}
-
-body2 {
-  font-size: $font-size-sm;
-  line-height: $line-height-base;
-  font-weight: 400;
-  margin-bottom: spacing-array(1); // 4px
-}
-
-.button {
-  font-size: $font-size-sm;
-  line-height: $line-height-sm;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: spacing-constant(1) spacing-constant(2); // 4px 8px
-  border-radius: 4px;
+button {
+  min-width: 180px;
+  border: 2px solid $color-secondary;
   background-color: $color-primary;
-  color: #fff;
-  border: none;
+  color: white;
+  border-radius: 0.9em;
+  padding: 0.8em 1.2em 0.8em 1em;
+  transition: all ease-in-out 0.2s;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer; // Ensure a pointer cursor for buttons
+  transition: 400ms;
+  outline: 3px #181717 solid;
+  outline-offset: -3px;
+  color: white;
 
   &:hover {
-    background-color: $color-primary-dark;
+    color: black;
   }
 
-  &--secondary {
-    background-color: $color-secondary;
 
-    &:hover {
-      background-color: $color-secondary-dark;
-    }
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: transparent;
   }
 }
 
@@ -132,20 +130,7 @@ body {
 
 p {
   margin-bottom: spacing-constant(2); // 8px
-}
-
-.container {
-  padding: spacing-constant(2); // 8px
-  @include respond-to(sm) {
-    padding: spacing-constant(4); // 16px
-  }
-  @include respond-to(md) {
-    padding: spacing-function(4); // 1rem
-  }
-  @include respond-to(lg) {
-    padding: spacing-array(4); // 32px
-  }
-  @include respond-to(xl) {
-    padding: spacing-array(5); // 64px
-  }
+  font-size: 18px;
+  line-height: $line-height-content-block;
+  text-transform: uppercase;
 }

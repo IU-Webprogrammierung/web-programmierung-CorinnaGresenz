@@ -36,11 +36,11 @@ $color-text-disabled: rgba(0, 0, 0, 0.38);
 $color-text-divider: rgba(0, 0, 0, 0.12);
 
 // Background Colors
-$color-background-paper: #fff;
-$color-background-default: #fff;
+$color-background-paper: rgba(0, 0, 0, 0.12);;
+$color-background-default: #FEBCB0;
 
 // Typography
-$font-primary: 'Helvetica Neue', Arial, sans-serif;
+$font-primary: 'Roboto', Arial, sans-serif;
 $font-secondary: 'Georgia', serif;
 
 $font-size-base: 16px;
@@ -55,8 +55,10 @@ $line-height-md: 1.5;
 $line-height-sm: 1.25;
 $line-height-xs: 1.2;
 
+$line-height-content-block: 1.75;
+
 // Spacing Strategies
-$spacing-unit: 4px;
+$spacing-unit: 8px;
 $spacing-function: 0.25rem;
 $spacing-array: (0, 4px, 8px, 16px, 32px, 64px);
 

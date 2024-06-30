@@ -5,68 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Über mich</title>
     <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/about-me.css" />
+    <!-- ROBOTO Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="../js/javascript.js" defer></script>
   </head>
   <body>
     <!-- Main container for the landing page -->
-    <div class="container">
+    <main class="container three-area-grid-template">
+      <!-- LOGO -->
+      <a class="logo-link" href="../index.html">
+        <img src="../img/logo/logo.png" height="300px" width="253px" />
+      </a>
       <!-- Header section with navigation -->
       <header class="header">
-        <div class="navbar">
-          <h1 class="logo">
-            <a class="logo-link" href="../index.html">
-              <img src="../img/logo/logo.png" height="128px" width="128px" />
-            </a>
-          </h1>
-          <nav>
-            <ul class="nav-links">
-              <li><a class="nav-link" href="../index.html">Home</a></li>
-              <li>
-                <a class="nav-link current-page" href="./about-me.html"
-                  >Über mich</a
-                >
-              </li>
-              <li>
-                <a class="nav-link" href="./image-gallery.html"
-                  >Bildergalerie</a
-                >
-              </li>
-              <li>
-                <a class="nav-link" href="./contact.html">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="navbar">
+          <!-- NAV LINKS -->
+          <a href="../index.html">
+            <button>HOME</button>
+          </a>
+          <a class="nav-link" href="../pages/about-me.html">
+            <button>ÜBER MICH</button>
+          </a>
+          <a class="nav-link" href="../pages/image-gallery.html">
+            <button>BILDERGALERIE</button>
+          </a>
+          <a class="nav-link" href="../pages/contact.html"
+            ><button>KONTAKT</button>
+          </a>
+        </nav>
       </header>
 
       <!-- Hero section with a call to action -->
       <section class="hero">
         <div class="about-me-hero-content">
-          <div class="about-me-text">
-            <h2>Willkommen auf meiner About me Page</h2>
-            <h4>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
-            </h4>
+          <div>
+            <h2 class="about-me-hero-title">Hallo ich bin Cora</h2>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
+              Seit meiner Kindheit war ich von den Möglichkeiten der Kunst
+              fasziniert, aber es war die Entdeckung der künstlichen
+              Intelligenz, die meine kreative Reise auf ein neues Level hob. Mit
+              jedem Pinselstrich und jedem digitalen Algorithmus erschaffe ich
+              Werke, die eine Brücke zwischen Mensch und Maschine schlagen.
+              Meine Leidenschaft gilt der Erschaffung von Bildern, die nicht nur
+              visuell ansprechend sind, sondern auch tiefere Emotionen und
+              Gedanken hervorrufen. Willkommen in meiner Welt der digitalen
+              Kunst, wo die Grenzen des Möglichen ständig neu definiert werden.
             </p>
           </div>
           <img src="../img/About-me-1.png" class="about-me-img" />
@@ -75,10 +64,10 @@
 
       <!-- Footer section with additional links and information -->
       <footer class="footer">
+        <a class="footer-link"><p>Impressum</p></a>
+        <a class="footer-link"><p>AGB</p></a>
         <p>&copy; 2024 AI by Cora. All rights reserved.</p>
-        <a class="footer-link">Impressum</a>
-        <a class="footer-link">AGB</a>
       </footer>
-    </div>
+    </main>
   </body>
 </html>

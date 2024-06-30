@@ -5,52 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>web-programmierung-CorinnaGresenz</title>
     <link rel="stylesheet" href="./style/main.css" />
+    <!-- ROBOTO Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <script src="./js/javascript.js" defer></script>
   </head>
   <body>
-    <!-- Main container for the landing page -->
-    <figure class="container">
+    <!-- Main container for page layout -->
+    <main class="container">
+      <!-- LOGO -->
+      <a class="logo-link" href="../index.html">
+        <img src="./img/logo/logo.png" height="300px" width="253px" />
+      </a>
       <!-- Header section with navigation -->
       <header class="header">
-        <div class="navbar">
-          <h1 class="logo">
-            <a class="logo-link" href="../index.html">
-              <img src="./img/logo/logo.png" height="128px" width="128px" />
-            </a>
-          </h1>
-          <nav>
-            <ul class="nav-links">
-              <li>
-                <a class="nav-link current-page" href="./index.html">Home</a>
-              </li>
-              <li>
-                <a class="nav-link" href="./pages/about-me.html">Über mich</a>
-              </li>
-              <li>
-                <a class="nav-link" href="./pages/image-gallery.html"
-                  >Bildergalerie</a
-                >
-              </li>
-              <li>
-                <a class="nav-link" href="./pages/contact.html">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="navbar">
+          <!-- NAV LINKS -->
+          <a href="./index.html">
+            <button>HOME</button>
+          </a>
+          <a class="nav-link" href="./pages/about-me.html">
+            <button>ÜBER MICH</button>
+          </a>
+          <a class="nav-link" href="./pages/image-gallery.html">
+            <button>BILDERGALERIE</button>
+          </a>
+          <a class="nav-link" href="./pages/contact.html"
+            ><button>KONTAKT</button>
+          </a>
+        </nav>
       </header>
 
       <!-- Hero section with a call to action -->
       <section class="hero">
+        <h2>Entdecken Sie Digitale Kunst mit AIBYCORA</h2>
         <div class="hero-content">
-          <h2>Willkommen bei AI by Cora</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Meine Kunstwerke entstehen durch die faszinierende Kombination aus
+            kreativer Vorstellungskraft und fortschrittlicher künstlicher
+            Intelligenz. Jedes Bild ist einzigartig und entführt den Betrachter
+            in eine Welt, die zugleich fremd und vertraut erscheint. Tauchen Sie
+            ein in die Vielfalt der digitalen Kunst und lassen Sie sich von den
+            verschiedenen Stilen und Techniken begeistern, die in jedem
+            Kunstwerk zum Ausdruck kommen.
           </p>
         </div>
       </section>
@@ -60,21 +61,21 @@
         <div class="social">
           <h3>
             <a class="social-link" href="https://www.tiktok.com/@aibycora"
-              >TikTok</a
+              ><h3>Tik Tok</h3></a
             >
           </h3>
         </div>
         <div class="social">
           <h3>
             <a class="social-link" href="https://www.pinterest.de/aibycora/"
-              >Pinterest
+              ><h3>Patreon</h3>
             </a>
           </h3>
         </div>
         <div class="social">
           <h3>
             <a class="social-link" href="https://www.patreon.com/aibycora"
-              >Patreon</a
+              ><h3>Pinterest</h3></a
             >
           </h3>
         </div>
@@ -82,10 +83,10 @@
 
       <!-- Footer section with additional links and information -->
       <footer class="footer">
+        <a class="footer-link" href="./pages/impressum.html"><p>Impressum</p></a>
+        <a class="footer-link" href="./pages/AGB.html"><p>AGB</p></a>
         <p>&copy; 2024 AI by Cora. All rights reserved.</p>
-        <a class="footer-link">Impressum</a>
-        <a class="footer-link">AGB</a>
       </footer>
-    </<figure class="container">>
+    </main>
   </body>
 </html>

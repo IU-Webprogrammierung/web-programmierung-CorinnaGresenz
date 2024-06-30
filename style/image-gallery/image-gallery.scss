@@ -22,8 +22,10 @@
 }
 
 .image-gallery {
-  padding-top: spacing-constant(16); // Assuming you want to use your spacing strategy
-  gap: spacing-function(1); // Assuming you want to use your spacing function
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  gap: spacing-function(1);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
@@ -42,6 +44,7 @@
 // Example of using variables and mixins for padding in .image-gallery-container
 .image-gallery-container {
   padding-top: spacing-constant(16); // Assuming 16 is defined in your spacing strategy
+
   @include respond-to(sm) {
     padding-top: spacing-constant(20); // Adjusted value for small screens
   }
