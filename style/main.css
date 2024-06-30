@@ -247,17 +247,19 @@ p {
 }
 
 .contact-container {
-  width: 75%;
-  margin: 400px auto;
-  padding: 160px;
+  width: 50%;
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
   background-color: rgba(0, 0, 0, 0.12);
-  box-shadow: 0 0 80px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
 h1 {
   text-align: center;
   color: rgba(0, 0, 0, 0.87);
+  margin-bottom: 40px;
 }
 
 form {
@@ -266,32 +268,33 @@ form {
 }
 
 label {
-  margin-top: 80px;
+  margin-top: 24px;
   color: rgba(0, 0, 0, 0.6);
+  font-size: 0.875rem;
 }
 
 input[type=text],
 input[type=email],
 textarea {
-  padding: 80px;
-  margin-top: 40px;
+  padding: 16px;
+  margin-top: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1rem;
   width: 100%;
 }
 
-.submit-button {
-  margin-top: 160px;
-  padding: 80px;
+button#submitButton {
+  margin-top: 40px;
+  padding: 24px;
   border: none;
   border-radius: 4px;
   background-color: #2e7d32;
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 }
-.submit-button:hover {
+button#submitButton:hover {
   background-color: #1b5e20;
 }
 

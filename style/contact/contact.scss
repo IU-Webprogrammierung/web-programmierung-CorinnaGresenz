@@ -10,17 +10,19 @@
 }
 
 .contact-container {
-  width: 75%;
-  margin: spacing-constant(50) auto; // Adjust based on your spacing strategy
-  padding: spacing-constant(20); // Adjust based on your spacing strategy
+  width: 50%; // Reduce the width
+  max-width: 600px; // Set a maximum width for better control
+  margin: spacing-constant(10) auto; // Reduce margin
+  padding: spacing-constant(5); // Reduce padding
   background-color: $color-background-paper; // Assuming you have a variable for background color
-  box-shadow: 0 0 spacing-constant(10) rgba(0, 0, 0, 0.1); // Adjust based on your spacing strategy
+  box-shadow: 0 0 spacing-constant(2) rgba(0, 0, 0, 0.1); // Adjusted shadow
   border-radius: 8px;
 }
 
 h1 {
   text-align: center;
   color: $color-text-primary; // Assuming you have a variable for text color
+  margin-bottom: spacing-constant(5); // Add margin bottom
 }
 
 form {
@@ -29,29 +31,30 @@ form {
 }
 
 label {
-  margin-top: spacing-constant(10); // Adjust based on your spacing strategy
+  margin-top: spacing-constant(3); // Adjust margin
   color: $color-text-secondary; // Assuming you have a variable for secondary text color
+  font-size: $font-size-sm; // Adjusted font size
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  padding: spacing-constant(10); // Adjust based on your spacing strategy
-  margin-top: spacing-constant(5); // Adjust based on your spacing strategy
+  padding: spacing-constant(2); // Adjust padding
+  margin-top: spacing-constant(2); // Adjust margin
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: $font-size-base; // Assuming you have a variable for base font size
+  font-size: $font-size-md; // Adjusted font size
   width: 100%;
 }
 
-.submit-button {
-  margin-top: spacing-constant(20); // Adjust based on your spacing strategy
-  padding: spacing-constant(10); // Adjust based on your spacing strategy
+button#submitButton {
+  margin-top: spacing-constant(5); // Adjust margin
+  padding: spacing-constant(3); // Adjust padding
   border: none;
   border-radius: 4px;
   background-color: $color-success-main; // Assuming you have a variable for success color
   color: #fff;
-  font-size: $font-size-base; // Assuming you have a variable for base font size
+  font-size: $font-size-md; // Adjusted font size
   cursor: pointer;
 
   &:hover {
