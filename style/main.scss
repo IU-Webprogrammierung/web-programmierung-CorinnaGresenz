@@ -36,7 +36,7 @@
   padding: spacing-constant(4) spacing-constant(8) spacing-constant(2) spacing-constant(8);
 
   @include respond-to(sm) {
-    padding: spacing-constant(4) spacing-constant(8)  spacing-constant(2) spacing-constant(8);
+    padding: spacing-constant(4) spacing-constant(8) spacing-constant(2) spacing-constant(8);
   }
 
   @include respond-to(md) {
@@ -48,8 +48,19 @@
   }
 
   @include respond-to(xl) {
-    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2) spacing-constant(12); 
+    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2) spacing-constant(12);
   }
+}
+
+/** -------------------------------------
+ *  Grid System with 3 areas
+ * ------------------------------------- */
+.container.three-area-grid-template {
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "hero"
+    "footer";
 }
 
 /** -------------------------------------

@@ -226,30 +226,15 @@ p {
   box-sizing: border-box;
 }
 
+.about-me-hero-title {
+  display: block;
+}
+
 .about-me-hero-content {
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  gap: 0.25rem;
   display: flex;
-  padding: 0 240px;
-  text-align: start;
-}
-
-.about-me-hero-content h2 {
-  font-weight: 500;
-}
-
-.about-me-hero-content h4 {
-  font-size: 24px;
-  font-weight: 300;
-  padding: 256px 0;
-}
-
-.about-me-hero-content p {
-  font-size: 160px;
-  font-weight: 300;
-  font-size: 96px;
+  align-items: center;
+  /* breakpoint */
+  max-width: 1200px;
 }
 
 /* Basic reset and box-sizing */
@@ -341,6 +326,14 @@ textarea {
   .container {
     padding: 64px 96px 16px 96px;
   }
+}
+
+/** -------------------------------------
+ *  Grid System with 3 areas
+ * ------------------------------------- */
+.container.three-area-grid-template {
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "hero" "footer";
 }
 
 /** -------------------------------------
