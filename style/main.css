@@ -298,6 +298,34 @@ button#submitButton:hover {
   background-color: #1b5e20;
 }
 
+.impressum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.impressum-content {
+  max-width: 1200px;
+  text-align: left;
+}
+
+.agb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.agb-content {
+  max-width: 1200px;
+  text-align: left;
+}
+
 /** -------------------------------------
  *  Global Styles
  * ------------------------------------- */
@@ -471,6 +499,7 @@ button#submitButton:hover {
 
 .footer-link {
   text-decoration: none;
+  color: black;
 }
 
 .footer-link:hover {
