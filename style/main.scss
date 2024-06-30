@@ -9,10 +9,137 @@
 
 @import "variables";
 @import "mixins";
-@import "grid";
 @import "global-theme";
 
 @import "./index/index.scss";
 @import "./image-gallery/image-gallery.scss";
 @import "./about-me/about-me.scss";
 @import "./contact/contact.scss";
+
+/** -------------------------------------
+ *  Global Styles
+ * ------------------------------------- */
+
+/* Container for the entire page */
+.container {
+  /* background: url("../img/background.jpg") center/cover no-repeat; */
+  display: grid;
+  grid-template-rows: auto 2fr 1fr auto;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "hero"
+    "socials"
+    "footer";
+  width: 100%;
+  margin: 0 auto;
+  padding: spacing-constant(4) spacing-constant(8) spacing-constant(2) spacing-constant(8);
+
+  @include respond-to(sm) {
+    padding: spacing-constant(4) spacing-constant(8)  spacing-constant(2) spacing-constant(8);
+  }
+
+  @include respond-to(md) {
+    padding: spacing-constant(6) spacing-constant(10) spacing-constant(2) spacing-constant(10);
+  }
+
+  @include respond-to(lg) {
+    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2) spacing-constant(12);
+  }
+
+  @include respond-to(xl) {
+    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2) spacing-constant(12); 
+  }
+}
+
+/** -------------------------------------
+ *  Grid System
+ * ------------------------------------- */
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include make-col($i);
+  }
+}
+
+.row {
+  @include make-row;
+}
+
+.col {
+  @include make-gutter;
+  box-sizing: border-box;
+}
+
+/** -------------------------------------
+ *  Header
+ * ------------------------------------- */
+
+.header {
+  min-height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.current-page {
+  /* border-bottom: 1px solid black; */
+  text-decoration: underline;
+}
+
+.logo-link {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 3rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.current-page {
+  text-decoration: underline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/** -------------------------------------
+ *  Footer
+ * ------------------------------------- */
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  padding: 1rem;
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

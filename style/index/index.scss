@@ -3,90 +3,6 @@
 @import "../variables";
 @import "../mixins";
 
-/* Basic reset and box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Container for the entire page */
-.container {
-  /* background: url("../img/background.jpg") center/cover no-repeat; */
-  display: grid;
-  grid-template-rows: auto 2fr 1fr auto;
-  min-height: 100vh;
-  grid-template-areas:
-    "header"
-    "hero"
-    "socials"
-    "footer";
-  width: 100%;
-  margin: 0 auto;
-  padding: spacing-constant(2); // Adjust based on your spacing strategy
-
-  @include respond-to(sm) {
-    padding: spacing-constant(4);
-  }
-
-  @include respond-to(md) {
-    padding: spacing-function(4);
-  }
-
-  @include respond-to(lg) {
-    padding: spacing-array(4);
-  }
-
-  @include respond-to(xl) {
-    padding: spacing-array(5);
-  }
-}
-
-/* Styling for the header and navigation */
-.header {
-  grid-area: header;
-  padding: 1rem;
-}
-
-.current-page {
-  /* border-bottom: 1px solid black; */
-  text-decoration: underline;
-}
-
-.logo-link {
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.navbar {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-}
-
-.nav-links {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  justify-content: center;
-  gap: 3rem;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
-
-.nav-link.current-page {
-  text-decoration: underline;
-}
-
-.nav-links a {
-  font-size: 24px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
 /* Styling for the hero section */
 .hero {
   grid-area: hero;
@@ -94,76 +10,49 @@
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 4rem 2rem;
 }
 
 .hero-content {
   /* breakpoint */
-  max-width: 600px;
+  max-width: 900px;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 /* Styling for the socials section */
 .socials {
+  max-height: 250px;
   grid-area: socials;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
   padding: 4rem 2rem;
   text-align: center;
 }
 
-.social h3 {
-  font-size: 1.5rem;
-}
-
-.social-link {
-  font-size: 24px;
-  color: black;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-/* Styling for the footer section */
-.footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
-
-.footer-link {
-  text-decoration: none;
-}
-
-.footer-link:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-/* Your grid columns setup */
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    @include make-col($i);
+.social {
+  cursor: pointer; // Ensure a pointer cursor for buttons
+  transition: 400ms;
+  outline: 3px transparent solid;
+  outline-offset: -3px;
+  min-width: 300px;
+  padding: 2rem;
+  border: 1px solid transparent;
+  //create a black border around the social icons
+  //when hovered
+  &:hover {
+    outline: 3px #181717 solid;
   }
 }
 
-.row {
-  @include make-row;
-}
-
-.col {
-  @include make-gutter;
-  box-sizing: border-box;
+.social-link {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
 }
