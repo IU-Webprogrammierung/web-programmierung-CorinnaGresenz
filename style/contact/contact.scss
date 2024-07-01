@@ -2,16 +2,9 @@
 @import '../variables';
 @import '../mixins';
 
-/* Basic reset and box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .contact-container {
-  width: 50%; // Reduce the width
-  max-width: 600px; // Set a maximum width for better control
+  width: 75%; // Reduce the width
+  max-width: 900px; // Set a maximum width for better control
   margin: spacing-constant(10) auto; // Reduce margin
   padding: spacing-constant(5); // Reduce padding
   background-color: $color-background-paper; // Assuming you have a variable for background color

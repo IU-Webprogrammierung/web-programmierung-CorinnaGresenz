@@ -17,34 +17,53 @@ Dieses Projekt ist eine einfache Webseite namens "AI by Cora", die mit HTML, CSS
 
 ```plaintext
 web-programmierung-CorinnaGresenz/
-├── css/
-│   ├── about-me.css
-│   ├── contact.css
-│   ├── image-gallery.css
-│   └── index.css
 ├── img/
-│   ├── AIbyCora-1.jpg
-│   ├── AIbyCora-2.png
-│   ├── AIbyCora-3.png
-│   ├── AIbyCora-4.png
-│   ├── AIbyCora-5.png
-│   ├── AIbyCora-6.png
-│   ├── AIbyCora-7.png
-│   └── AIbyCora-8.png
+│   ├── logo/
+│   │   └── logo.png
+│   ├── About-me-1.png
+│   ├── AlbyCora-1.jpg
+│   ├── AlbyCora-2.png
+│   ├── AlbyCora-3.png
+│   ├── AlbyCora-4.png
+│   ├── AlbyCora-5.png
+│   ├── AlbyCora-6.png
+│   ├── AlbyCora-7.png
+│   ├── AlbyCora-8.png
+│   └── AlbyCora-9.png
 ├── js/
 │   └── javascript.js
 ├── pages/
 │   ├── about-me.html
+│   ├── AGB.html
 │   ├── contact.html
-│   └── image-gallery.html
+│   ├── image-gallery.html
+│   └── impressum.html
+├── style/
+│   ├── about-me/
+│   │   └── about-me.scss
+│   ├── agb/
+│   │   └── agb.scss
+│   ├── contact/
+│   │   └── contact.scss
+│   ├── image-gallery/
+│   │   └── image-gallery.scss
+│   ├── impressum/
+│   │   └── impressum.scss
+│   └── index/
+│       ├── index.scss
+│       ├── _global-theme.scss
+│       ├── _mixins.scss
+│       ├── _variables.scss
+│       ├── main.css
+│       ├── main.css.map
+│       └── main.scss
 ├── index.html
 └── README.md
 ```
-
 ## Verwendete Technologien
 
 - HTML5
-- CSS3
+- CSS3 (SCSS)
 - JavaScript
 
 ## Installation
@@ -54,42 +73,52 @@ Klone das Repository:
 ```bash
 git clone https://github.com/username/web-programmierung-CorinnaGresenz.git
 ```
-
 Navigiere in das Projektverzeichnis:
+
 
 ```bash
 cd web-programmierung-CorinnaGresenz
 ```
 
-Öffne die `index.html` Datei in deinem bevorzugten Browser.
+Öffne die index.html Datei in deinem bevorzugten Browser.
 
-### Nutzung
+## Nutzung
 
 Nach der Installation kannst du die Webseite lokal in deinem Browser öffnen, indem du die `index.html` Datei öffnest. Von dort aus kannst du zu den verschiedenen Unterseiten navigieren:
 
 - Startseite
 - Über mich
+- AGB
 - Bildergalerie
 - Kontakt
+- Impressum
 
-### Seitenbeschreibung
+## Seitenbeschreibung
 
-#### Startseite (`index.html`)
+### Startseite (`index.html`)
 
 Enthält eine Willkommensnachricht und Links zu sozialen Medien.
 
-#### Über mich (`pages/about-me.html`)
+### Über mich (`pages/about-me.html`)
 
 Beinhaltet eine persönliche Vorstellung und ein Bild.
 
-#### Bildergalerie (`pages/image-gallery.html`)
+### AGB (`pages/AGB.html`)
+
+Enthält die allgemeinen Geschäftsbedingungen.
+
+### Bildergalerie (`pages/image-gallery.html`)
 
 Zeigt eine Galerie von AI-generierten Bildern.
 
-#### Kontakt (`pages/contact.html`)
+### Kontakt (`pages/contact.html`)
 
 Ein einfaches Kontaktformular zur Erfassung von Namen, E-Mail und Nachrichten.
 
-### Autor
+### Impressum (`pages/impressum.html`)
+
+Beinhaltet rechtliche Informationen und Impressum.
+
+## Autor
 
 Corinna Gresenz

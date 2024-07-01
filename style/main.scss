@@ -3,7 +3,7 @@
 /* Basic reset and box-sizing */
 * {
   margin: 0;
-  padding: 0;
+  // padding: 0;
   box-sizing: border-box;
 }
 
@@ -22,9 +22,7 @@
  *  Global Styles
  * ------------------------------------- */
 
-/* Container for the entire page */
 .container {
-  /* background: url("../img/background.jpg") center/cover no-repeat; */
   display: grid;
   grid-template-rows: auto 2fr 1fr auto;
   min-height: 100vh;
@@ -33,12 +31,15 @@
     "hero"
     "socials"
     "footer";
+  align-items: center;
+  justify-items: center;
   width: 100%;
+
   margin: 0 auto;
-  padding: spacing-constant(4) spacing-constant(8) spacing-constant(2) spacing-constant(8);
+  padding: spacing-constant(1) spacing-constant(2) spacing-constant(1) spacing-constant(2);
 
   @include respond-to(sm) {
-    padding: spacing-constant(4) spacing-constant(8) spacing-constant(2) spacing-constant(8);
+    padding: spacing-constant(2) spacing-constant(4) spacing-constant(2) spacing-constant(4);
   }
 
   @include respond-to(md) {
@@ -54,9 +55,6 @@
   }
 }
 
-/** -------------------------------------
- *  Grid System with 3 areas
- * ------------------------------------- */
 .container.three-area-grid-template {
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
@@ -66,36 +64,34 @@
 }
 
 /** -------------------------------------
- *  Grid System
- * ------------------------------------- */
-@for $i from 1 through 12 {
-  .col-#{$i} {
-    @include make-col($i);
-  }
-}
-
-.row {
-  @include make-row;
-}
-
-.col {
-  @include make-gutter;
-  box-sizing: border-box;
-}
-
-/** -------------------------------------
  *  Header
  * ------------------------------------- */
 
 .header {
+  width: 100%;
   min-height: 300px;
   display: flex;
   justify-content: flex-start;
   padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.logo {
+  height: 16rem;
+  width: 12rem;
+
+  @include respond-to(md) {
+    height: 16rem;
+    width: 12rem;
+  }
+
+  @include respond-to(xl) {
+    height: 24rem;
+    width: 18rem;
+  }
 }
 
 .current-page {
-  /* border-bottom: 1px solid black; */
   text-decoration: underline;
 }
 
@@ -111,17 +107,28 @@
 .navbar {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
+  flex-direction: column;
+
+  @include respond-to(xl) {
+    flex-direction: row;
+  }
 }
 
 .nav-links {
+  width: 100%;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, auto);
+  }
+
   justify-content: center;
-  gap: 3rem;
+  gap: 5vw;
 }
 
 .nav-link:hover {
@@ -144,8 +151,22 @@
   grid-area: footer;
   display: flex;
   justify-content: center;
-  gap: 6rem;
-  padding: 8rem 1rem 1rem 1rem;
+  gap: 1rem;
+  padding: 4rem 1rem 1rem 1rem;
+
+  @include respond-to(sm) {
+    gap: 2rem;
+    padding: 4rem 1rem 1rem 1rem;
+  }
+
+  @include respond-to(md) {
+    gap: 6rem;
+    padding: 10rem 1rem 1rem 1rem;
+  }
+
+  @include respond-to(xxl) {
+    margin-left: 18rem;
+  }
 }
 
 .footer-link {

@@ -36,7 +36,8 @@ $color-text-disabled: rgba(0, 0, 0, 0.38);
 $color-text-divider: rgba(0, 0, 0, 0.12);
 
 // Background Colors
-$color-background-paper: rgba(0, 0, 0, 0.12);;
+$color-background-paper: rgba(0, 0, 0, 0.12);
+;
 $color-background-default: #FEBCB0;
 
 // Typography
@@ -44,10 +45,12 @@ $font-primary: 'Roboto', Arial, sans-serif;
 $font-secondary: 'Georgia', serif;
 
 $font-size-base: 16px;
-$font-size-lg: 1.25rem;
-$font-size-md: 1rem;
-$font-size-sm: 0.875rem;
-$font-size-xs: 0.75rem;
+$font-size-xxl: 4.5rem;
+$font-size-xl: 3.5rem;
+$font-size-lg: 2.5rem;
+$font-size-md: 1.5rem;
+$font-size-sm: 1.25rem;
+$font-size-xs: 1rem;
 
 $line-height-base: 1.5;
 $line-height-lg: 1.75;
@@ -60,7 +63,14 @@ $line-height-content-block: 1.75;
 // Spacing Strategies
 $spacing-unit: 8px;
 $spacing-function: 0.25rem;
-$spacing-array: (0, 4px, 8px, 16px, 32px, 64px);
+$spacing-array: (
+    0,
+    4px,
+    8px,
+    16px,
+    32px,
+    64px
+);
 
 // Breakpoints
 $breakpoint-xs: 0px;
@@ -68,3 +78,4 @@ $breakpoint-sm: 600px;
 $breakpoint-md: 900px;
 $breakpoint-lg: 1200px;
 $breakpoint-xl: 1536px;
+$breakpoint-xxl: 2560px;
