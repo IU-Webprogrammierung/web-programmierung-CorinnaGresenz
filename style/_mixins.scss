@@ -15,31 +15,39 @@
 }
 
 @mixin respond-to($breakpoint) {
-  @if $breakpoint == xs {
-    @media (min-width: $breakpoint-xs) { @content; }
-  } @else if $breakpoint == sm {
-    @media (min-width: $breakpoint-sm) { @content; }
-  } @else if $breakpoint == md {
-    @media (min-width: $breakpoint-md) { @content; }
-  } @else if $breakpoint == lg {
-    @media (min-width: $breakpoint-lg) { @content; }
-  } @else if $breakpoint == xl {
-    @media (min-width: $breakpoint-xl) { @content; }
+  @if $breakpoint ==xs {
+    @media (min-width: $breakpoint-xs) {
+      @content;
+    }
   }
-}
 
-@mixin make-col($size) {
-  width: percentage($size / 12);
-}
+  @else if $breakpoint ==sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
 
-@mixin make-gutter {
-  padding-left: spacing-constant(2); // Adjust based on your spacing strategy
-  padding-right: spacing-constant(2); // Adjust based on your spacing strategy
-}
+  @else if $breakpoint ==md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
 
-@mixin make-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -spacing-constant(2); // Adjust based on your spacing strategy
-  margin-right: -spacing-constant(2); // Adjust based on your spacing strategy
+  @else if $breakpoint ==lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==xxl {
+    @media (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
 }

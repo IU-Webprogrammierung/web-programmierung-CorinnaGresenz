@@ -1,75 +1,122 @@
-// Global SASS Theme
 @import "variables";
 @import "mixins";
 
-// Breakpoints
-$breakpoint-xs: 0px; // Extra small devices (portrait phones, less than 600px)
-$breakpoint-sm: 600px; // Small devices (landscape phones, 600px and up)
-$breakpoint-md: 900px; // Medium devices (tablets, 900px and up)
-$breakpoint-lg: 1200px; // Large devices (desktops, 1200px and up)
-$breakpoint-xl: 1536px; // Extra large devices (large desktops, 1536px and up)
+//body styles
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-text-primary;
+  background-color: $color-background-default;
 
-// Typography Styles
+
+  @include respond-to(sm) {
+    max-width: none;
+  }
+
+  @include respond-to(md) {
+    max-width: 1200px;
+  }
+
+  @include respond-to(lg) {
+    max-width: 1536px;
+  }
+
+  @include respond-to(xl) {
+    // max-width for xl and xxl not needed
+    max-width: unset;
+  }
+}
+
+
 h1 {
-  font-size: 2.5rem; // 40px
+  @include respond-to(sm) {
+    font-size: 3.5rem;
+  }
+
+
+  @include respond-to(lg) {
+    font-size: 4rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 4.5rem;
+  }
+
   line-height: $line-height-lg;
   font-weight: 700;
-  margin-bottom: spacing-function(2); // 0.5rem
 }
 
 h2 {
-  font-size: 3em; // 32px
+  @include respond-to(sm) {
+    font-size: 2.5rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 3.5rem;
+  }
+
+  @include respond-to(xxl) {
+    font-size: 4rem;
+  }
+
   line-height: $line-height-lg;
   font-weight: 300;
-  margin-bottom: spacing-constant(2); // 8px
   text-transform: uppercase;
 }
 
 h3 {
-  font-size: 2.5rem; // 32px
+  @include respond-to(sm) {
+    font-size: 2.25rem;
+  }
+
+  @include respond-to(md) {
+    font-size: 2.5rem;
+  }
+
+
+  @include respond-to(xl) {
+    font-size: 3rem;
+  }
+
+  @include respond-to(xxl) {
+    font-size: 3.5rem;
+  }
+
   line-height: $line-height-md;
   font-weight: 300;
-  margin-bottom: spacing-array(2); // 8px
   text-transform: uppercase;
 }
 
-h4 {
-  font-size: 1.5rem; // 24px
-  line-height: $line-height-md;
-  font-weight: 600;
-  margin-bottom: spacing-constant(1); // 4px
-}
+p {
+  @include respond-to(sm) {
+    font-size: 1rem;
+  }
 
-h5 {
-  font-size: 1.25rem; // 20px
-  line-height: $line-height-md;
-  font-weight: 500;
-  margin-bottom: spacing-function(1); // 0.25rem
-}
+  @include respond-to(md) {
+    font-size: 1.3rem;
+  }
 
-h6 {
-  font-size: 1rem; // 16px
-  line-height: $line-height-md;
-  font-weight: 500;
-  margin-bottom: spacing-array(1); // 4px
-}
+  @include respond-to(xl) {
+    font-size: 1.5rem;
+  }
 
-.subtitle1 {
-  font-size: $font-size-lg;
-  line-height: $line-height-md;
-  font-weight: 400;
-  margin-bottom: spacing-constant(1); // 4px
-}
+  @include respond-to(xxl) {
+    font-size: 1.75rem;
+  }
 
-.subtitle2 {
-  font-size: $font-size-md;
-  line-height: $line-height-md;
-  font-weight: 400;
-  margin-bottom: spacing-function(1); // 0.25rem
+  line-height: $line-height-content-block;
+  text-transform: uppercase;
 }
 
 button {
-  min-width: 180px;
+  min-width: 150px;
+  max-width: 150px;
+
+  @include respond-to(lg) {
+    min-width: 200px;
+  }
+
   border: 2px solid $color-secondary;
   background-color: $color-primary;
   color: white;
@@ -100,37 +147,4 @@ button {
   &:hover {
     background-color: transparent;
   }
-}
-
-.caption {
-  font-size: $font-size-xs;
-  line-height: $line-height-xs;
-  font-weight: 400;
-  color: $color-primary-dark;
-  margin-bottom: spacing-constant(1); // 4px
-}
-
-.overline {
-  font-size: $font-size-xs;
-  line-height: $line-height-xs;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $color-primary;
-  margin-bottom: spacing-function(1); // 0.25rem
-}
-
-// Example Usage
-body {
-  font-family: $font-primary;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $color-text-primary;
-  background-color: $color-background-default;
-}
-
-p {
-  margin-bottom: spacing-constant(2); // 8px
-  font-size: 18px;
-  line-height: $line-height-content-block;
-  text-transform: uppercase;
 }
