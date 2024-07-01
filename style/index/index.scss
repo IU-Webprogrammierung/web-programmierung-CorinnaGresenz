@@ -5,15 +5,36 @@
 
 /* Styling for the hero section */
 .hero {
+  max-width: 340px;
+  @include respond-to(sm) {
+    max-width: 540px;
+  }
+
+  @include respond-to(md) {
+    max-width: 720px;
+  }
+
+  @include respond-to(lg) {
+    max-width: 900px;
+  }
+
+  @include respond-to(xl) {
+    // max-width for xl and xxl not needed
+    max-width: unset;
+  }
+
   grid-area: hero;
   color: black;
   display: grid;
   place-items: center;
   text-align: center;
+
+  @include respond-to(xxl) {
+    margin-left: 18rem;
+  }
 }
 
 .hero-content {
-  /* breakpoint */
   max-width: 900px;
 }
 
@@ -25,27 +46,63 @@
   margin-bottom: 2rem;
 }
 
-/* Styling for the socials section */
+
 .socials {
-  max-height: 200px;
   grid-area: socials;
   display: flex;
   justify-content: center;
-  gap: 8rem;
-  padding: 4rem 1rem 1rem 2rem;
+  align-items: flex-start;
+  flex-direction: column;
   text-align: center;
+  gap: 2rem;
+  @include respond-to(sm) {
+    gap: 3rem;
+  }
+
+  @include respond-to(lg) {
+    padding: 4rem 1rem 1rem 2rem;
+    max-height: 200px;
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  @include respond-to(xxl) {
+    gap: 8rem;
+  }
+
+  @include respond-to(xxl) {
+    margin-left: 18rem;
+  }
 }
 
 .social {
-  cursor: pointer; // Ensure a pointer cursor for buttons
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   transition: 400ms;
-  outline: 3px transparent solid;
+
+  outline: 3px #181717 solid;
+
   outline-offset: -3px;
   min-width: 300px;
-  padding: 2rem;
+
+  @include respond-to(md) {
+
+    padding: 2rem;
+  }
+
+  @include respond-to(lg) {
+    outline: 3px transparent solid;
+  }
+
+  @include respond-to(xl) {
+
+    padding: 1.5rem;
+  }
+
   border: 1px solid transparent;
-  //create a black border around the social icons
-  //when hovered
+
   &:hover {
     outline: 3px #181717 solid;
   }
