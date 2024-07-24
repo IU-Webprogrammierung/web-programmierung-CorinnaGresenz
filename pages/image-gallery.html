@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bilder Galerie</title>
     <link rel="stylesheet" href="../style/main.css" />
-    <script src="../js/javascript.js" defer></script>
+    <script src="../js/app.js" defer></script>
   </head>
   <body>
     <!-- Main container for the landing page -->
     <main class="container three-area-grid-template">
-
       <!-- Header section with navigation -->
       <header class="header">
         <nav class="navbar">
@@ -29,8 +28,8 @@
             <a class="nav-link" href="./image-gallery.html">
               <button>GALERIE</button>
             </a>
-            <a class="nav-link" href="./contact.html"
-              ><button>KONTAKT</button>
+            <a class="nav-link" href="./contact.html">
+              <button>KONTAKT</button>
             </a>
           </div>
         </nav>
@@ -39,60 +38,129 @@
       <!-- Image Gallery Section -->
       <section class="image-gallery">
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-1.jpg">
-            <img class="image" src="../img/AIbyCora-1.jpg" alt="AI-girl-1" />
-          </a>
+          <img
+            class="image"
+            src="../img/AIbyCora-2.png"
+            alt="Regenbogen-Dämon"
+          />
           <p>Neon-Mystik</p>
         </div>
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-2.png">
-            <img class="image" src="../img/AIbyCora-2.png" alt="AI-girl-2" />
-          </a>
+          <img
+            class="image"
+            src="../img/AIbyCora-2.png"
+            alt="Regenbogen-Dämon"
+          />
           <p>Regenbogen-Dämon</p>
         </div>
-
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-3.png">
-            <img class="image" src="../img/AIbyCora-3.png" alt="AI-girl-3" />
-          </a>
+          <img
+            class="image"
+            src="../img/AIbyCora-3.png"
+            alt="Lachende Dunkelheit"
+          />
           <p>Lachende Dunkelheit</p>
         </div>
-
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-4.png">
-            <img class="image" src="../img/AIbyCora-4.png" alt="AI-girl-4" />
-          </a>
+          <img class="image" src="../img/AIbyCora-4.png" alt="Süßes Unheil" />
           <p>Süßes Unheil</p>
         </div>
-
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-5.png">
-            <img class="image" src="../img/AIbyCora-5.png" alt="AI-girl-5" />
-          </a>
+          <img class="image" src="../img/AIbyCora-5.png" alt="Wilde Freude" />
           <p>Wilde Freude</p>
         </div>
-
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-6.png">
-            <img class="image" src="../img/AIbyCora-6.png" alt="AI-girl-6" />
-          </a>
+          <img
+            class="image"
+            src="../img/AIbyCora-6.png"
+            alt="Leuchtende Rebellion"
+          />
           <p>Leuchtende Rebellion</p>
         </div>
-
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-7.png">
-            <img class="image" src="../img/AIbyCora-7.png" alt="AI-girl-7" />
-          </a>
+          <img
+            class="image"
+            src="../img/AIbyCora-7.png"
+            alt="Verborgene Geheimnisse"
+          />
           <p>Verborgene Geheimnisse</p>
         </div>
-
         <div class="image-container">
-          <a target="_blank" href="../img/AIbyCora-8.png">
-            <img class="image" src="../img/AIbyCora-8.png" alt="AI-girl-8" />
-          </a>
+          <img
+            class="image"
+            src="../img/AIbyCora-8.png"
+            alt="Diabolische Anmut"
+          />
           <p>Diabolische Anmut</p>
         </div>
       </section>
+
+      <!-- Modal Slider Section -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+          <button class="prev">&#10094;</button>
+          <div class="slider">
+            <div class="slide active">
+              <img
+                class="image"
+                src="../img/AIbyCora-2.png"
+                alt="Regenbogen-Dämon"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-2.png"
+                alt="Regenbogen-Dämon"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-3.png"
+                alt="Lachende Dunkelheit"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-4.png"
+                alt="Süßes Unheil"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-5.png"
+                alt="Wilde Freude"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-6.png"
+                alt="Leuchtende Rebellion"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-7.png"
+                alt="Verborgene Geheimnisse"
+              />
+            </div>
+            <div class="slide">
+              <img
+                class="image"
+                src="../img/AIbyCora-8.png"
+                alt="Diabolische Anmut"
+              />
+            </div>
+          </div>
+          <button class="next">&#10095;</button>
+        </div>
+      </div>
     </main>
 
     <!-- Footer section with additional links and information -->

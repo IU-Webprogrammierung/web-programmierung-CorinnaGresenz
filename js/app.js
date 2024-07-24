@@ -1,7 +1,5 @@
-document
-  .getElementById("submitButton")
-  .addEventListener("click", submitContactForm);
+import $ from "jquery";
 
-function submitContactForm() {
-  alert("Das Kontaktformular wurde abgeschickt!");
-}
+$(document).ready(function () {
+  console.log("jQuery is ready!");
+});
