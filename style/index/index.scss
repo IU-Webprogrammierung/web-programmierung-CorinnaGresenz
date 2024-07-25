@@ -20,14 +20,14 @@
 
   @include respond-to(xl) {
     // max-width for xl and xxl not needed
-    max-width: unset;
+    max-width: 1536px
   }
 
   grid-area: hero;
   color: black;
   display: grid;
   place-items: center;
-  text-align: center;
+  text-align: left;
 
   @include respond-to(xxl) {
     margin-left: 18rem;
