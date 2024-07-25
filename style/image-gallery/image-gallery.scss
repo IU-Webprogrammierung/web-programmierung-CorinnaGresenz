@@ -1,26 +1,47 @@
 /* Variables for material design */
 $card-bg: #fff;
 $card-border-radius: 8px;
-$card-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
-$card-shadow-hover: 0 32px 90px rgba(0, 0, 0, 0.2);
+$card-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+$card-shadow-hover: 0 24px 60px rgba(0, 0, 0, 7);
 $padding: 20px;
 $font-family: "Roboto", sans-serif;
 $font-color: #333;
 
+body,
+h3 {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
 .image-gallery {
-  margin-left: auto;
-  margin-right: auto;
-  column-count: 3; // Number of columns
-  column-gap: 16px; // Gap between columns
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .image-container {
-  break-inside: avoid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: $padding;
   box-sizing: border-box;
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    flex: 1 1 calc(25% - #{$padding * 2});
+  }
+
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7) {
+    flex: 1 1 calc(33% - #{$padding * 2});
+  }
+
+  &:nth-child(8),
+  &:nth-child(9) {
+    flex: 1 1 calc(50% - #{$padding * 2});
+  }
 }
 
 .figure {
@@ -29,11 +50,11 @@ $font-color: #333;
   box-shadow: $card-shadow;
   overflow: hidden;
   transition: box-shadow 0.3s ease-in-out;
-  max-width: 600px;
   text-align: center;
 
   &:hover {
     box-shadow: $card-shadow-hover;
+    cursor: pointer; 
   }
 
   .image {
@@ -54,94 +75,17 @@ $font-color: #333;
   }
 }
 
-.image {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-}
-
-.modal {
+.modal .modal-content .slide {
   display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  text-align: center;
 
-.modal-content {
-  position: relative;
-}
+  &.active {
+    display: block;
+  }
 
-.close {
-  padding: 6px 24px;
-  border-radius: 50%; // Round the background
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  color: #fff;
-  font-size: 40px; // Increased size
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s; // Transition for smooth effect
-  border: none;
-  background: transparent;
-}
-
-.close:hover {
-  transform: scale(1.2); // Scale up the button
-  color: #ff5252; // Change color to Material UI red
-  background-color: rgba(255, 255, 255, 0.2); // Slight background change
-  border-radius: 50%; // Round the background
-}
-
-.slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  display: none;
-}
-
-.slide.active {
-  display: block;
-}
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 15px 30px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.prev {
-  left: -25%;
-}
-
-.next {
-  right: -25%;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: #ddd;
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
