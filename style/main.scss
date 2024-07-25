@@ -37,22 +37,27 @@
   width: 100%;
 
   margin: 0 auto;
-  padding: spacing-constant(1) spacing-constant(2) spacing-constant(1) spacing-constant(2);
+  padding: spacing-constant(1) spacing-constant(2) spacing-constant(1)
+    spacing-constant(2);
 
   @include respond-to(sm) {
-    padding: spacing-constant(2) spacing-constant(4) spacing-constant(2) spacing-constant(4);
+    padding: spacing-constant(2) spacing-constant(4) spacing-constant(2)
+      spacing-constant(4);
   }
 
   @include respond-to(md) {
-    padding: spacing-constant(6) spacing-constant(10) spacing-constant(2) spacing-constant(10);
+    padding: spacing-constant(6) spacing-constant(10) spacing-constant(2)
+      spacing-constant(10);
   }
 
   @include respond-to(lg) {
-    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2) spacing-constant(12);
+    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2)
+      spacing-constant(12);
   }
 
   @include respond-to(xl) {
-    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2) spacing-constant(12);
+    padding: spacing-constant(8) spacing-constant(12) spacing-constant(2)
+      spacing-constant(12);
   }
 }
 
