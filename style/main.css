@@ -438,6 +438,7 @@ button:hover {
   transition: color 0.3s;
 }
 
+/* Variables for material design */
 .image-gallery {
   margin-left: auto;
   margin-right: auto;
@@ -447,7 +448,38 @@ button:hover {
 
 .image-container {
   break-inside: avoid;
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.figure {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  max-width: 600px;
+  text-align: center;
+}
+.figure:hover {
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.2);
+}
+.figure .image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.figure .figcaption {
+  padding: 16px;
+  background: #fff;
+}
+.figure .figcaption .category {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: #333;
 }
 
 .image {
