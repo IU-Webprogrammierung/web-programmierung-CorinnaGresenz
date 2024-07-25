@@ -15,6 +15,12 @@
 }
 
 .main-form-container {
+  //responsvie design
+  flex-direction: column;
+  @include respond-to(lg) {
+    flex-direction: row;
+  }
+
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   background: white;
   display: flex;
@@ -22,11 +28,35 @@
   overflow: hidden;
 }
 
-.form-container,
+.center {
+  margin-top: spacing-constant(10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji-container {
+  margin-top: spacing-constant(6);
+  display: flex;
+  flex-direction: column;
+}
+
 .info-container {
+  padding: spacing-constant(6);
+  @include respond-to(lg) {
+    margin: auto;
+    text-align: center;
+    max-width: 40%;
+    padding: spacing-constant(12);
+  }
+}
+
+.form-container {
+  padding: spacing-constant(6);
   min-width: 40%;
-  margin: auto;
-  padding: spacing-constant(12);
+  @include respond-to(lg) {
+    padding: spacing-constant(12);
+  }
 }
 
 .form-container {
@@ -38,10 +68,37 @@
   margin-bottom: spacing-constant(8);
 }
 
+.finisher-sentence {
+  color: lightcoral;
+}
+
 .input-group {
   justify-content: space-between;
   display: flex;
   gap: 24px;
+}
+
+.input-field-textarea {
+  position: relative;
+  border-bottom: 2px solid $color-secondary;
+  width: 100%;
+  border: none;
+  outline: none;
+
+  font-size: 1.5rem;
+  @include respond-to(sm) {
+    font-size: 1.2rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 1.5rem;
+  }
+
+  color: $color-text-primary;
+  margin-top: 3rem;
+  resize: none;
+  height: spacing-constant(24);
+  border: 2px solid $color-secondary;
 }
 
 .input-field {
@@ -55,18 +112,21 @@
     background: transparent;
     border: none;
     outline: none;
-    font-size: 16px;
+    font-size: 1.5rem;
+
+    @include respond-to(sm) {
+      font-size: 1.2rem;
+    }
+
+    @include respond-to(xl) {
+      font-size: 1.5rem;
+    }
+
     color: $color-text-primary;
   }
 
   input {
     height: spacing-constant(6);
-  }
-
-  textarea {
-    margin: 3rem 0;
-    resize: none;
-    height: spacing-constant(24);
   }
 }
 
@@ -87,8 +147,10 @@
 }
 
 .info-container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  // font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .info-container p {
