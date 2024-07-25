@@ -1,5 +1,5 @@
-@import '../variables';
-@import '../mixins';
+@import "../variables";
+@import "../mixins";
 
 .contact-container {
   width: 75%;
@@ -15,6 +15,7 @@
 }
 
 .main-form-container {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   background: white;
   display: flex;
   border-radius: 5px;
@@ -50,7 +51,6 @@
 
   input,
   textarea {
-
     width: 100%;
     background: transparent;
     border: none;
@@ -115,7 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  box-shadow: 0px 0px 0px 4px lightcoral;
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
