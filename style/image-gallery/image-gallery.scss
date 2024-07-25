@@ -1,3 +1,12 @@
+/* Variables for material design */
+$card-bg: #fff;
+$card-border-radius: 8px;
+$card-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+$card-shadow-hover: 0 32px 90px rgba(0, 0, 0, 0.2);
+$padding: 20px;
+$font-family: "Roboto", sans-serif;
+$font-color: #333;
+
 .image-gallery {
   margin-left: auto;
   margin-right: auto;
@@ -7,7 +16,42 @@
 
 .image-container {
   break-inside: avoid;
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $padding;
+  box-sizing: border-box;
+}
+
+.figure {
+  background: $card-bg;
+  border-radius: $card-border-radius;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+  max-width: 600px;
+  text-align: center;
+
+  &:hover {
+    box-shadow: $card-shadow-hover;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .figcaption {
+    padding: 16px;
+    background: $card-bg;
+
+    .category {
+      font-size: 1.25em;
+      font-weight: 500;
+      color: $font-color;
+    }
+  }
 }
 
 .image {
