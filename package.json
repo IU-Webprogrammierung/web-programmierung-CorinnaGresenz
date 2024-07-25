@@ -1,0 +1,27 @@
+{
+    "name": "webpack-config-webprojekt-corinna-gresenz",
+    "version": "0.0.1",
+    "description": "",
+    "private": true,
+    "keywords": [
+        "webpack",
+        "web"
+    ],
+    "author": "Corinna Gresenz",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start:dev": "webpack serve --open --config webpack.config.dev.js",
+        "start:prod": "webpack serve --open --config webpack.config.prod.js",
+        "build": "webpack --config webpack.config.prod.js"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^11.0.0",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.6.0",
+        "jquery": "^3.7.1",
+        "webpack": "^5.92.1",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.0.4",
+        "webpack-merge": "^5.10.0"
+    }
+}
