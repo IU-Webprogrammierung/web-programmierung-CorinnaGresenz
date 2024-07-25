@@ -1,56 +1,132 @@
-// Import variables and mixins if needed
 @import '../variables';
 @import '../mixins';
 
 .contact-container {
-  width: 75%; // Reduce the width
-  max-width: 900px; // Set a maximum width for better control
-  margin: spacing-constant(10) auto; // Reduce margin
-  padding: spacing-constant(5); // Reduce padding
-  background-color: $color-background-paper; // Assuming you have a variable for background color
-  box-shadow: 0 0 spacing-constant(2) rgba(0, 0, 0, 0.1); // Adjusted shadow
+  width: 75%;
+  max-width: 900px;
+  margin: spacing-constant(10) auto;
+  padding: spacing-constant(5);
   border-radius: 8px;
 }
 
-h1 {
-  text-align: center;
-  color: $color-text-primary; // Assuming you have a variable for text color
-  margin-bottom: spacing-constant(5); // Add margin bottom
+.title {
+  line-height: 1.3;
+  color: $color-text-primary;
 }
 
-form {
+.main-form-container {
+  background: white;
   display: flex;
-  flex-direction: column;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-label {
-  margin-top: spacing-constant(3); // Adjust margin
-  color: $color-text-secondary; // Assuming you have a variable for secondary text color
-  font-size: $font-size-sm; // Adjusted font size
+.form-container,
+.info-container {
+  min-width: 40%;
+  margin: auto;
+  padding: spacing-constant(12);
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: spacing-constant(2); // Adjust padding
-  margin-top: spacing-constant(2); // Adjust margin
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: $font-size-md; // Adjusted font size
+.form-container {
+  border-right: 1px solid #e8e8e8;
+}
+
+.form-container h1 {
+  font-size: 4rem;
+  margin-bottom: spacing-constant(8);
+}
+
+.input-group {
+  justify-content: space-between;
+  display: flex;
+  gap: 24px;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid $color-secondary;
+  margin: 1rem 0;
+
+  input,
+  textarea {
+
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: $color-text-primary;
+  }
+
+  input {
+    height: spacing-constant(6);
+  }
+
+  textarea {
+    margin: 3rem 0;
+    resize: none;
+    height: spacing-constant(24);
+  }
+}
+
+.form-btn {
   width: 100%;
-}
-
-button#submitButton {
-  margin-top: spacing-constant(5); // Adjust margin
-  padding: spacing-constant(3); // Adjust padding
+  padding: 10px;
+  background-color: $color-primary;
+  color: white;
   border: none;
-  border-radius: 4px;
-  background-color: $color-success-main; // Assuming you have a variable for success color
-  color: #fff;
-  font-size: $font-size-md; // Adjusted font size
+  border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $color-success-dark; // Assuming you have a variable for darker shade of success color
+    background-color: $color-primary-dark;
   }
+}
+
+.info-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.info-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.info-container a {
+  color: $color-secondary;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.submit-btn {
+  margin-top: spacing-constant(4);
+}
+
+.back-to-top-btn {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(180, 160, 255, 0.253);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  // position: absolute;
+}
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
 }
