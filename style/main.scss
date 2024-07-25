@@ -17,6 +17,7 @@
 @import "./contact/contact.scss";
 @import "./impressum/impressum.scss";
 @import "./agb/agb.scss";
+@import "./test-gallery/test-gallery.scss";
 
 /** -------------------------------------
  *  Global Styles
@@ -177,4 +178,35 @@
 .footer-link:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.back-to-top-btn:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(181, 160, 255);
+  align-items: center;
+}
+
+.back-to-top-btn:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.back-to-top-btn::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Back to Top";
+  color: white;
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.back-to-top-btn:hover::before {
+  font-size: 13px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
 }
