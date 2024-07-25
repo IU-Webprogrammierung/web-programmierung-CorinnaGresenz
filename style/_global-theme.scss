@@ -2,97 +2,96 @@
 @import "mixins";
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Italic.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-BoldItalic.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Light.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-LightItalic.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-LightItalic.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Medium.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-MediumItalic.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Black.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-BlackItalic.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-BlackItalic.ttf") format("truetype");
   font-weight: 900;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-Thin.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url('../assets/fonts/Roboto-ThinItalic.ttf') format('truetype');
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-ThinItalic.ttf") format("truetype");
   font-weight: 100;
   font-style: italic;
 }
 
 //body styles
 body {
-  font-family: $font-primary;
+  font-family: $font-family;
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $color-text-primary;
   background-color: $color-background-default;
-
 
   @include respond-to(sm) {
     max-width: none;
@@ -112,88 +111,166 @@ body {
   }
 }
 
-
 h1 {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+
   @include respond-to(sm) {
     font-size: 3.5rem;
   }
-
 
   @include respond-to(lg) {
     font-size: 4rem;
   }
 
   @include respond-to(xl) {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
-
-  line-height: $line-height-lg;
-  font-weight: 700;
 }
 
 h2 {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 2.75rem;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+
   @include respond-to(sm) {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  @include respond-to(lg) {
+    font-size: 2cqb;
   }
 
   @include respond-to(xl) {
-    font-size: 3.5rem;
+    font-size: 2.75rem;
   }
-
-  @include respond-to(xxl) {
-    font-size: 4rem;
-  }
-
-  line-height: $line-height-lg;
-  font-weight: 300;
-  text-transform: uppercase;
 }
 
 h3 {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.167;
+  letter-spacing: 0em;
+
   @include respond-to(sm) {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
-  @include respond-to(md) {
-    font-size: 2.5rem;
+  @include respond-to(lg) {
+    font-size: 1.75rem;
   }
-
 
   @include respond-to(xl) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
-
-  @include respond-to(xxl) {
-    font-size: 3.5rem;
-  }
-
-  line-height: $line-height-md;
-  font-weight: 300;
-  text-transform: uppercase;
 }
 
-p {
+h4 {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 1.525rem;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+
   @include respond-to(sm) {
-    font-size: 1rem;
+    font-size: 1.275rem;
   }
 
-  @include respond-to(md) {
-    font-size: 1.3rem;
+  @include respond-to(lg) {
+    font-size: 1.5rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 1.525rem;
+  }
+}
+
+h5 {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.334;
+  letter-spacing: 0em;
+
+  @include respond-to(sm) {
+    font-size: 0.8rem;
+  }
+
+  @include respond-to(lg) {
+    font-size: 1.175rem;
   }
 
   @include respond-to(xl) {
     font-size: 1.5rem;
   }
+}
 
-  @include respond-to(xxl) {
-    font-size: 1.75rem;
+h6 {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+
+  @include respond-to(sm) {
+    font-size: 1rem;
   }
 
-  line-height: $line-height-content-block;
-  text-transform: uppercase;
+  @include respond-to(lg) {
+    font-size: 1.125rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 1.25rem;
+  }
+}
+
+caption {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+
+  @include respond-to(sm) {
+    font-size: 0.625rem;
+  }
+
+  @include respond-to(lg) {
+    font-size: 0.6875rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 0.75rem;
+  }
 }
 
 button {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+
+  @include respond-to(sm) {
+    font-size: 0.75rem;
+  }
+
+  @include respond-to(lg) {
+    font-size: 0.8125rem;
+  }
+
+  @include respond-to(xl) {
+    font-size: 0.875rem;
+  }
+
   min-width: 150px;
   max-width: 150px;
 
@@ -207,7 +284,7 @@ button {
   border-radius: 0.9em;
   padding: 0.8em 1.2em 0.8em 1em;
   transition: all ease-in-out 0.2s;
-  font-family: $font-primary;
+  font-family: $font-family;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer; // Ensure a pointer cursor for buttons
@@ -219,7 +296,6 @@ button {
   &:hover {
     color: black;
   }
-
 
   span {
     display: flex;
