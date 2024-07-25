@@ -185,11 +185,17 @@
   text-decoration: underline;
 }
 
+.back-to-top-btn {
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+}
+
 .back-to-top-btn:hover {
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.3s;
-  background-color: rgb(181, 160, 255);
+  background-color: lightcoral;
   align-items: center;
 }
 
@@ -200,8 +206,6 @@
 }
 
 .back-to-top-btn::before {
-  position: absolute;
-  bottom: -20px;
   content: "Back to Top";
   color: white;
   /* transition-duration: .3s; */
