@@ -104,8 +104,18 @@ body {
   }
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption,
+button {
   font-family: "Montserrat";
+}
+
+h1 {
   font-weight: 500;
   font-size: 5rem;
   line-height: 1.167;
@@ -128,7 +138,6 @@ h1 {
 }
 
 h2 {
-  font-family: "Montserrat";
   font-weight: 300;
   font-size: 2.75rem;
   line-height: 1.2;
@@ -141,7 +150,7 @@ h2 {
 }
 @media (min-width: 1200px) {
   h2 {
-    font-size: 2cqb;
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 1536px) {
@@ -151,7 +160,6 @@ h2 {
 }
 
 h3 {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 2rem;
   line-height: 1.167;
@@ -174,7 +182,6 @@ h3 {
 }
 
 h4 {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 1.525rem;
   line-height: 1.235;
@@ -197,7 +204,6 @@ h4 {
 }
 
 h5 {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.334;
@@ -220,7 +226,6 @@ h5 {
 }
 
 h6 {
-  font-family: "Montserrat";
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 1.6;
@@ -243,7 +248,6 @@ h6 {
 }
 
 caption {
-  font-family: "Montserrat";
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.66;
@@ -266,7 +270,6 @@ caption {
 }
 
 button {
-  font-family: "Montserrat";
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 1.75;
@@ -280,14 +283,9 @@ button {
   border-radius: 0.9em;
   padding: 0.8em 1.2em 0.8em 1em;
   transition: all ease-in-out 0.2s;
-  font-family: "Montserrat";
-  font-size: 18px;
-  font-weight: 500;
   cursor: pointer;
-  transition: 400ms;
   outline: 3px #181717 solid;
   outline-offset: -3px;
-  color: white;
 }
 @media (min-width: 600px) {
   button {
@@ -311,15 +309,13 @@ button {
 }
 button:hover {
   color: black;
+  background-color: transparent;
 }
 button span {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-}
-button:hover {
-  background-color: transparent;
 }
 
 /* Styling for the hero section */
@@ -1359,6 +1355,7 @@ ul {
     padding: 2rem 1rem 1rem 1rem;
   }
 }
+
 .footer-link-copyright {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.5);
@@ -1389,7 +1386,6 @@ ul {
 }
 
 .back-to-top-btn:hover .svgIcon {
-  /* width: 20px; */
   transition-duration: 0s;
   transform: translateY(200%);
 }
@@ -1397,7 +1393,6 @@ ul {
 .back-to-top-btn::before {
   content: "Nach oben";
   color: white;
-  /* transition-duration: .3s; */
   font-size: 0px;
 }
 
@@ -1405,7 +1400,6 @@ ul {
   font-size: 13px;
   opacity: 1;
   bottom: unset;
-  /* transform: translateY(-30px); */
   transition-duration: 0.3s;
 }
 
