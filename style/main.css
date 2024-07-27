@@ -882,13 +882,9 @@ h3 {
 
 .typewriter h1 {
   overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid lightcoral;
-  /* The typwriter cursor */
   white-space: wrap;
-  /* Gives that scrolling effect as the typing happens */
   letter-spacing: 0.15em;
-  /* Adjust as needed */
   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 @media (min-width: 900px) {
@@ -901,7 +897,6 @@ h3 {
   margin-bottom: 6rem;
 }
 
-/* The typing effect */
 @keyframes typing {
   from {
     width: 0;
@@ -910,7 +905,6 @@ h3 {
     width: 100%;
   }
 }
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to {
     border-color: transparent;
@@ -923,11 +917,11 @@ h3 {
   margin-bottom: 2rem;
 }
 
-.socials-section h4 {
+.social-links-section h4 {
   text-decoration: underline;
 }
 
-.socials-section {
+.social-links-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -935,11 +929,8 @@ h3 {
   margin-top: 6rem;
 }
 
-ul {
+.social-links-list {
   list-style: none;
-}
-
-.example-2 {
   padding: unset;
   flex-direction: column;
   gap: 1.5rem;
@@ -948,17 +939,17 @@ ul {
   align-items: center;
 }
 @media (min-width: 900px) {
-  .example-2 {
+  .social-links-list {
     flex-direction: row;
   }
 }
 
-.example-2 .icon-content {
+.icon-container {
   margin: 0 10px;
   position: relative;
 }
 
-.example-2 .icon-content .tooltip {
+.icon-container .tooltip {
   position: absolute;
   top: -30px;
   left: 50%;
@@ -972,13 +963,13 @@ ul {
   transition: all 0.3s ease;
 }
 
-.example-2 .icon-content:hover .tooltip {
+.icon-container:hover .tooltip {
   opacity: 1;
   visibility: visible;
   top: -50px;
 }
 
-.example-2 .icon-content a {
+.icon-container a {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -992,22 +983,22 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-.example-2 .icon-content a:hover {
+.icon-container a:hover {
   box-shadow: 3px 2px 45px 0px rgba(0, 0, 0, 0.12);
 }
 
-.example-2 .icon-content a svg {
+.icon-container a svg {
   position: relative;
   z-index: 1;
   width: 48px;
   height: 48px;
 }
 
-.example-2 .icon-content a:hover {
+.icon-container a:hover {
   color: white;
 }
 
-.example-2 .icon-content a .filled {
+.icon-container a .filled {
   position: absolute;
   top: auto;
   bottom: 0;
@@ -1018,27 +1009,27 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
-.example-2 .icon-content a:hover .filled {
+.icon-container a:hover .filled {
   height: 100%;
 }
 
-.example-2 .icon-content a[data-social=linkedin] .filled,
-.example-2 .icon-content a[data-social=linkedin] ~ .tooltip {
+.icon-container a[data-social=linkedin] .filled,
+.icon-container a[data-social=linkedin] ~ .tooltip {
   background-color: #0274b3;
 }
 
-.example-2 .icon-content a[data-social=github] .filled,
-.example-2 .icon-content a[data-social=github] ~ .tooltip {
+.icon-container a[data-social=github] .filled,
+.icon-container a[data-social=github] ~ .tooltip {
   background-color: #24262a;
 }
 
-.example-2 .icon-content a[data-social=instagram] .filled,
-.example-2 .icon-content a[data-social=instagram] ~ .tooltip {
+.icon-container a[data-social=instagram] .filled,
+.icon-container a[data-social=instagram] ~ .tooltip {
   background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
 }
 
-.example-2 .icon-content a[data-social=youtube] .filled,
-.example-2 .icon-content a[data-social=youtube] ~ .tooltip {
+.icon-container a[data-social=youtube] .filled,
+.icon-container a[data-social=youtube] ~ .tooltip {
   background-color: #ff0000;
 }
 
