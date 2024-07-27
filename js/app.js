@@ -3,6 +3,7 @@ import $ from "jquery";
 $(document).ready(function () {
   console.log("jQuery is ready!");
 
+  // form logic
   $("#submitButton").on("click", function () {
     submitContactForm();
   });
@@ -11,9 +12,10 @@ $(document).ready(function () {
     alert("Das Kontaktformular wurde abgeschickt!");
   }
 
+  // Image gallery logic
   let modal = $("#myModal");
   let slides = $(".slide");
-  let images = $(".image-gallery .image");
+  let images = $(".image-gallery .figure .image");
   let slideIndex = 0;
 
   images.each(function (index) {
