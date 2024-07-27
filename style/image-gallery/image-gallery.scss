@@ -1,3 +1,6 @@
+@import "../variables";
+@import "../mixins";
+
 /* Variables for material design */
 $card-bg: #fff;
 $card-border-radius: 8px;
@@ -30,8 +33,36 @@ h3 {
   padding: $padding;
   box-sizing: border-box;
 
-  //responsiveness
   @include respond-to(sm) {
+    &:nth-child(1),
+    &:nth-child(2) {
+      flex: 1 1 calc(50% - #{$padding * 2});
+    }
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      flex: 1 1 calc(33% - #{$padding * 2});
+    }
+
+    &:nth-child(6),
+    &:nth-child(7) {
+      flex: 1 1 calc(50% - #{$padding * 2});
+    }
+
+    &:nth-child(8),
+    &:nth-child(9) {
+      flex: 1 1 calc(33% - #{$padding * 2});
+    }
+
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(12) {
+      flex: 1 1 calc(50% - #{$padding * 2});
+    }
+  }
+
+  @include respond-to(lg) {
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3),
@@ -52,33 +83,6 @@ h3 {
     &:nth-child(12) {
       flex: 1 1 calc(33% - #{$padding * 2});
     }
-  }
-
-  &:nth-child(1),
-  &:nth-child(2) {
-    flex: 1 1 calc(50% - #{$padding * 2});
-  }
-
-  &:nth-child(3),
-  &:nth-child(4),
-  &:nth-child(5) {
-    flex: 1 1 calc(33% - #{$padding * 2});
-  }
-
-  &:nth-child(6),
-  &:nth-child(7) {
-    flex: 1 1 calc(50% - #{$padding * 2});
-  }
-
-  &:nth-child(8),
-  &:nth-child(9) {
-    flex: 1 1 calc(33% - #{$padding * 2});
-  }
-
-  &:nth-child(10),
-  &:nth-child(11),
-  &:nth-child(12) {
-    flex: 1 1 calc(50% - #{$padding * 2});
   }
 }
 
@@ -117,7 +121,6 @@ h3 {
   }
 
   .image {
-    //responsiveness
     width: 100%;
     height: auto;
     display: block;
@@ -188,24 +191,23 @@ h3 {
 
   .close {
     padding: 6px 24px;
-    border-radius: 50%; // Round the background
+    border-radius: 50%;
     position: absolute;
     top: 5%;
     right: 5%;
     color: #fff;
-    font-size: 40px; // Increased size
+    font-size: 40px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s; // Transition for smooth effect
+    transition: transform 0.2s, background-color 0.2s;
     border: none;
     background: transparent;
   }
 
   .close:hover {
-    transform: scale(1.2); // Scale up the button
-    color: #ff5252; // Change color to Material UI red
-    background-color: rgba(255, 255, 255, 0.2); // Slight background change
-    border-radius: 50%; // Round the background
+    transform: scale(1.2);
+    color: #ff5252;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   .prev,
@@ -239,7 +241,7 @@ h3 {
       right: -25%;
     }
     right: -80%;
-    border-radius: 3px 0 0 3px;
+    border-radius: 0 3px 3px 0;
   }
 
   .prev:hover,
@@ -256,7 +258,6 @@ h3 {
     }
 
     .image {
-      //responsiveness
       @include respond-to(xl) {
         width: 50vw;
       }
