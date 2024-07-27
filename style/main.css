@@ -1291,7 +1291,7 @@ ul {
 }
 
 .back-to-top-btn::before {
-  content: "Nach oben";
+  content: "Back to Top";
   color: white;
   /* transition-duration: .3s; */
   font-size: 0px;
