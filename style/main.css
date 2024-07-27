@@ -457,14 +457,32 @@ h3 {
   padding: 20px;
   box-sizing: border-box;
 }
-.image-container:nth-child(1), .image-container:nth-child(2), .image-container:nth-child(3), .image-container:nth-child(4) {
+.image-container:nth-child(1), .image-container:nth-child(2), .image-container:nth-child(3), .image-container:nth-child(4), .image-container:nth-child(5) {
+  flex: 1 1 calc(20% - 40px);
+}
+.image-container:nth-child(6), .image-container:nth-child(7), .image-container:nth-child(8), .image-container:nth-child(9) {
   flex: 1 1 calc(25% - 40px);
 }
-.image-container:nth-child(5), .image-container:nth-child(6), .image-container:nth-child(7) {
+.image-container:nth-child(10), .image-container:nth-child(11), .image-container:nth-child(12) {
   flex: 1 1 calc(33% - 40px);
 }
-.image-container:nth-child(8), .image-container:nth-child(9) {
-  flex: 1 1 calc(50% - 40px);
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  text-decoration: underline;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-weight: 300;
+  margin-bottom: 4rem;
 }
 
 .figure {
@@ -475,18 +493,21 @@ h3 {
   transition: box-shadow 0.3s ease-in-out;
   text-align: center;
 }
+.figure:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+}
 .figure .image {
   width: 100%;
   height: auto;
   display: block;
 }
 .figure .figcaption {
+  border: 2px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px;
+  padding: 16px;
   background: #fff;
-  border: 2px solid black;
 }
 .figure .figcaption .category {
   font-size: 1.25em;
@@ -494,19 +515,21 @@ h3 {
   color: #333;
 }
 .figure .figcaption .download-button {
-  outline: 2px solid transparent;
-  transition: outline 0.3s ease;
   color: black;
   text-decoration: none;
   align-items: center;
   display: flex;
   flex-direction: column;
   background: none;
-  padding: 6px 18px;
+  border: none;
+  padding: 0.5rem;
   cursor: pointer;
+  outline: 2px solid transparent;
+  transition: outline 0.3s ease-in-out;
 }
 .figure .figcaption .download-button:hover {
   outline: 2px solid black;
+  cursor: pointer;
 }
 .figure .figcaption .download-button .download-icon {
   width: 24px;
@@ -515,14 +538,82 @@ h3 {
   transition: fill 0.3s ease-in-out;
 }
 
-.modal .modal-content .slide {
+.modal {
   display: none;
-  text-align: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 }
-.modal .modal-content .slide.active {
+.modal .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+}
+.modal .close {
+  padding: 6px 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  border: none;
+  background: transparent;
+}
+.modal .close:hover {
+  transform: scale(1.2);
+  color: #ff5252;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+.modal .prev,
+.modal .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.modal .prev {
+  left: -25%;
+  border-radius: 3px 0 0 3px;
+}
+.modal .next {
+  right: -25%;
+  border-radius: 3px 0 0 3px;
+}
+.modal .prev:hover,
+.modal .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.modal .slide {
+  display: none;
+}
+.modal .slide.active {
   display: block;
 }
-.modal .modal-content .slide .image {
+.modal .slide .image {
   width: 100%;
   height: auto;
   display: block;
@@ -1200,7 +1291,7 @@ ul {
 }
 
 .back-to-top-btn::before {
-  content: "Back to Top";
+  content: "Nach oben";
   color: white;
   /* transition-duration: .3s; */
   font-size: 0px;

@@ -30,20 +30,41 @@ h3 {
   &:nth-child(1),
   &:nth-child(2),
   &:nth-child(3),
-  &:nth-child(4) {
+  &:nth-child(4),
+  &:nth-child(5) {
+    flex: 1 1 calc(20% - #{$padding * 2});
+  }
+
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(8),
+  &:nth-child(9) {
     flex: 1 1 calc(25% - #{$padding * 2});
   }
 
-  &:nth-child(5),
-  &:nth-child(6),
-  &:nth-child(7) {
+  &:nth-child(10),
+  &:nth-child(11),
+  &:nth-child(12) {
     flex: 1 1 calc(33% - #{$padding * 2});
   }
+}
 
-  &:nth-child(8),
-  &:nth-child(9) {
-    flex: 1 1 calc(50% - #{$padding * 2});
-  }
+.title-section {
+  display: flex;
+  flex-direction: column;
+  padding: $padding;
+  box-sizing: border-box;
+}
+
+.title {
+  text-decoration: underline;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-weight: 300;
+  margin-bottom: 4rem;
 }
 
 .figure {
@@ -54,6 +75,10 @@ h3 {
   transition: box-shadow 0.3s ease-in-out;
   text-align: center;
 
+  &:hover {
+    box-shadow: $card-shadow-hover;
+  }
+
   .image {
     width: 100%;
     height: auto;
@@ -61,12 +86,13 @@ h3 {
   }
 
   .figcaption {
+    border: 2px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px;
+    padding: 16px;
     background: $card-bg;
-    border: 2px solid black;
+
     .category {
       font-size: 1.25em;
       font-weight: 500;
@@ -74,20 +100,22 @@ h3 {
     }
 
     .download-button {
-      outline: 2px solid transparent;
-      transition: outline 0.3s ease;
-      &:hover {
-        outline: 2px solid black;
-      }
-
       color: black;
       text-decoration: none;
       align-items: center;
       display: flex;
       flex-direction: column;
       background: none;
-      padding: 6px 18px;
+      border: none;
+      padding: 0.5rem;
       cursor: pointer;
+      outline: 2px solid transparent;
+      transition: outline 0.3s ease-in-out;
+
+      &:hover {
+        outline: 2px solid black;
+        cursor: pointer;
+      }
 
       .download-icon {
         width: 24px;
@@ -99,17 +127,93 @@ h3 {
   }
 }
 
-.modal .modal-content .slide {
+.modal {
   display: none;
-  text-align: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
 
-  &.active {
-    display: block;
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
   }
 
-  .image {
-    width: 100%;
-    height: auto;
-    display: block;
+  .close {
+    padding: 6px 24px;
+    border-radius: 50%; // Round the background
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #fff;
+    font-size: 40px; // Increased size
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s; // Transition for smooth effect
+    border: none;
+    background: transparent;
+  }
+
+  .close:hover {
+    transform: scale(1.2); // Scale up the button
+    color: #ff5252; // Change color to Material UI red
+    background-color: rgba(255, 255, 255, 0.2); // Slight background change
+    border-radius: 50%; // Round the background
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .prev {
+    left: -25%;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .next {
+    right: -25%;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  .slide {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 }
