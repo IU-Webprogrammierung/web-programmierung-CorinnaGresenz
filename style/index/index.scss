@@ -7,32 +7,17 @@
 .hero {
   width: 100%;
   align-items: center;
-  // max-width: 340px;
+  max-width: 300px;
 
-  // @include respond-to(sm) {
-  //   max-width: 540px;
-  // }
-
-  // @include respond-to(md) {
-  //   max-width: 720px;
-  // }
-
-  // @include respond-to(lg) {
-  //   max-width: 900px;
-  // }
-
-  // @include respond-to(xl) {
-  //   // max-width for xl and xxl not needed
-  //   max-width: 1536px;
-  // }
+  @include respond-to(sm) {
+    max-width: unset;
+  }
 
   grid-area: hero;
   color: black;
   display: flex;
   flex-direction: column;
   text-align: left;
-
-  // margin-left: 18rem;
 }
 
 .hero-content {
@@ -61,8 +46,20 @@
   display: flex;
   gap: 3rem;
   justify-content: center;
-  margin-top: 8rem;
-  margin-bottom: 6rem;
+
+  flex-direction: column;
+
+  @include respond-to(lg) {
+    flex-direction: row;
+  }
+
+  @include respond-to(xl) {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+  }
+
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 .socials {
@@ -130,7 +127,12 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  max-width: 50%;
+
+  @include respond-to(lg) {
+    max-width: 50%;
+  }
+
+  max-width: 75%;
   // margin-top: 4rem;
   // margin-left: 18rem;
 }
@@ -151,7 +153,15 @@
 }
 
 .card {
-  width: 400px;
+  @include respond-to(lg) {
+    width: 320px;
+  }
+
+  @include respond-to(xl) {
+    width: 400px;
+  }
+
+  width: 300px;
   height: 320px;
   border-radius: 20px;
   background: #f5f5f5;
@@ -176,6 +186,7 @@
 }
 
 .card-button {
+  height: unset;
   transform: translate(-50%, 125%);
   text-transform: uppercase;
   width: 60%;
