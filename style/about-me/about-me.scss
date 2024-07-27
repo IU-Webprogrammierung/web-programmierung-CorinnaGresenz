@@ -6,10 +6,31 @@
   display: block;
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 6rem;
+  // margin-bottom: 6rem;
+}
+
+.hero-about-me h1 {
+  // max width of the h1 of the hero element
+  // has to be limited because of the animation
+  max-width: 920px;
+}
+
+.hero-about-me {
+  margin-bottom: 4rem;
+}
+
 .about-me-hero-content {
   flex-direction: column;
   align-items: center;
   max-width: 540px;
+
   @include respond-to(sm) {
     max-width: 720px;
   }
@@ -29,6 +50,7 @@
   @include respond-to(lg) {
     flex-direction: row;
   }
+
   gap: 3rem;
   display: flex;
   align-items: left;
@@ -42,6 +64,7 @@
 
 .desktop {
   display: none;
+
   @include respond-to(lg) {
     display: block;
   }
@@ -75,11 +98,14 @@
 }
 
 .typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid lightcoral; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid lightcoral;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
   animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
 }
 
@@ -92,6 +118,7 @@
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -99,10 +126,12 @@
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
+
   from,
   to {
     border-color: transparent;
   }
+
   50% {
     border-color: lightcoral;
   }
@@ -112,7 +141,7 @@
   margin-bottom: 2rem;
 }
 
-.socials-section h4{
+.socials-section h4 {
   text-decoration: underline;
 }
 
@@ -135,10 +164,12 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
 .example-2 .icon-content {
   margin: 0 10px;
   position: relative;
 }
+
 .example-2 .icon-content .tooltip {
   position: absolute;
   top: -30px;
@@ -152,11 +183,13 @@ ul {
   font-size: 14px;
   transition: all 0.3s ease;
 }
+
 .example-2 .icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
   top: -50px;
 }
+
 .example-2 .icon-content a {
   position: relative;
   overflow: hidden;
@@ -170,18 +203,22 @@ ul {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
 }
+
 .example-2 .icon-content a svg {
   position: relative;
   z-index: 1;
   width: 48px;
   height: 48px;
 }
+
 .example-2 .icon-content a:hover {
   color: white;
 }
+
 .example-2 .icon-content a .filled {
   position: absolute;
   top: auto;
@@ -192,32 +229,33 @@ ul {
   background-color: #000;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover .filled {
   height: 100%;
 }
 
 .example-2 .icon-content a[data-social="linkedin"] .filled,
-.example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
+.example-2 .icon-content a[data-social="linkedin"]~.tooltip {
   background-color: #0274b3;
 }
 
 .example-2 .icon-content a[data-social="github"] .filled,
-.example-2 .icon-content a[data-social="github"] ~ .tooltip {
+.example-2 .icon-content a[data-social="github"]~.tooltip {
   background-color: #24262a;
 }
+
 .example-2 .icon-content a[data-social="instagram"] .filled,
-.example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-  background: linear-gradient(
-    45deg,
-    #405de6,
-    #5b51db,
-    #b33ab4,
-    #c135b4,
-    #e1306c,
-    #fd1f1f
-  );
+.example-2 .icon-content a[data-social="instagram"]~.tooltip {
+  background: linear-gradient(45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f);
 }
+
 .example-2 .icon-content a[data-social="youtube"] .filled,
-.example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+.example-2 .icon-content a[data-social="youtube"]~.tooltip {
   background-color: #ff0000;
 }
