@@ -29,7 +29,7 @@
   grid-template-areas:
     "header"
     "hero"
-    "socials"
+    "textblox"
     "footer";
   align-items: center;
   justify-items: center;
@@ -98,6 +98,14 @@
 
 .current-page {
   text-decoration: underline;
+}
+
+.divider::after {
+  width: 60vw;
+  content: "";
+  display: block;
+  border-top: 1px solid rgb(0, 0, 0, 0.2);
+  margin: 20px 0;
 }
 
 .logo-link {
@@ -178,25 +186,26 @@
 }
 
 .footer {
+  align-items: center;
   flex-direction: column;
   grid-area: footer;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  padding: 4rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
 
   @include respond-to(sm) {
     gap: 1.5rem;
-    padding: 4rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
   }
 
   @include respond-to(md) {
     gap: 1.5rem;
-    padding: 10rem 1rem 1rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
   }
 
   @include respond-to(xxl) {
-    margin-left: 18rem;
+    // margin-left: 18rem;
   }
 }
 
@@ -231,8 +240,8 @@
 
 .back-to-top-btn:hover .svgIcon {
   /* width: 20px; */
-  transition-duration: 0.3s;
-  transform: translateY(-200%);
+  transition-duration: 0.0s;
+  transform: translateY(200%);
 }
 
 .back-to-top-btn::before {
