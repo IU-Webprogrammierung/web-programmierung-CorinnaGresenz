@@ -5,33 +5,34 @@
 
 /* Styling for the hero section */
 .hero {
-  max-width: 340px;
-  @include respond-to(sm) {
-    max-width: 540px;
-  }
+  width: 100%;
+  align-items: center;
+  // max-width: 340px;
 
-  @include respond-to(md) {
-    max-width: 720px;
-  }
+  // @include respond-to(sm) {
+  //   max-width: 540px;
+  // }
 
-  @include respond-to(lg) {
-    max-width: 900px;
-  }
+  // @include respond-to(md) {
+  //   max-width: 720px;
+  // }
 
-  @include respond-to(xl) {
-    // max-width for xl and xxl not needed
-    max-width: 1536px
-  }
+  // @include respond-to(lg) {
+  //   max-width: 900px;
+  // }
+
+  // @include respond-to(xl) {
+  //   // max-width for xl and xxl not needed
+  //   max-width: 1536px;
+  // }
 
   grid-area: hero;
   color: black;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
   text-align: left;
 
-  @include respond-to(xxl) {
-    margin-left: 18rem;
-  }
+  // margin-left: 18rem;
 }
 
 .hero-content {
@@ -46,6 +47,23 @@
   margin-bottom: 2rem;
 }
 
+.hero-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title-container h1 {
+  font-weight: 400;
+}
+
+.hero-cards {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin-top: 8rem;
+  margin-bottom: 6rem;
+}
 
 .socials {
   grid-area: socials;
@@ -55,6 +73,7 @@
   flex-direction: column;
   text-align: center;
   gap: 2rem;
+
   @include respond-to(sm) {
     gap: 3rem;
   }
@@ -71,7 +90,7 @@
   }
 
   @include respond-to(xxl) {
-    margin-left: 18rem;
+    // margin-left: 18rem;
   }
 }
 
@@ -88,7 +107,6 @@
   min-width: 300px;
 
   @include respond-to(md) {
-
     padding: 2rem;
   }
 
@@ -97,7 +115,6 @@
   }
 
   @include respond-to(xl) {
-
     padding: 1.5rem;
   }
 
@@ -108,8 +125,100 @@
   }
 }
 
+.textblock-container {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 50%;
+  // margin-top: 4rem;
+  // margin-left: 18rem;
+}
+
+.textblock-container h2 {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.textblock-container h3 {
+  font-weight: 300;
+}
+
 .social-link {
   color: black;
   text-decoration: none;
   transition: color 0.3s;
+}
+
+.card {
+  width: 400px;
+  height: 320px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #c3c6ce;
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.card-details {
+  color: black;
+  height: 100%;
+  gap: 0.5em;
+  display: grid;
+  place-content: center;
+}
+
+.card-details-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.card-button {
+  transform: translate(-50%, 125%);
+  text-transform: uppercase;
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.text-body {
+  color: rgb(134, 134, 134);
+  text-transform: uppercase;
+}
+
+.text-title-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/*Text*/
+.text-title {
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+/*Hover*/
+.card:hover {
+  border-color: lightcoral;
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+  &:hover {
+    background-color: lightcoral;
+    color: white;
+  }
 }
