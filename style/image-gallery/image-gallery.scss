@@ -4,7 +4,6 @@ $card-border-radius: 8px;
 $card-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 $card-shadow-hover: 0 24px 60px rgba(0, 0, 0, 0.7);
 $padding: 20px;
-$font-family: "Roboto", sans-serif;
 $font-color: #333;
 $icon-color: #e8eaed;
 $icon-hover-color: #ffffff;
@@ -17,6 +16,7 @@ h3 {
 }
 
 .image-gallery {
+  margin-left: 4rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -50,6 +50,8 @@ h3 {
 }
 
 .title-section {
+  width: 100%;
+  margin: 4rem 8rem 0rem 16rem;
   display: flex;
   flex-direction: column;
   padding: $padding;
