@@ -260,7 +260,7 @@ h3 {
 
     .image {
       @include respond-to(xl) {
-        width: 50vw;
+        width: 40vw;
       }
 
       width: 33vw;
