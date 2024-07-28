@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 
+// Font-face declarations for Montserrat font
 @font-face {
   font-family: "Montserrat";
   src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
@@ -84,7 +85,8 @@
   font-weight: 100;
   font-style: italic;
 }
-//body styles
+
+// Body styles
 body {
   font-family: $font-family;
   font-size: $font-size-base;
@@ -105,20 +107,31 @@ body {
   }
 
   @include respond-to(xl) {
-    // max-width for xl and xxl not needed
-    max-width: unset;
+    max-width: unset; // max-width for xl and xxl not needed
   }
 }
 
-h1 {
+// Heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+caption,
+button {
   font-family: $font-family;
+}
+
+// Individual heading styles with responsive adjustments
+h1 {
   font-weight: 500;
-  font-size: 5rem;
+  font-size: 2.5rem;
   line-height: 1.167;
   letter-spacing: -0.01562em;
 
   @include respond-to(sm) {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 
   @include respond-to(lg) {
@@ -131,9 +144,8 @@ h1 {
 }
 
 h2 {
-  font-family: $font-family;
   font-weight: 300;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   letter-spacing: -0.00833em;
 
@@ -142,7 +154,7 @@ h2 {
   }
 
   @include respond-to(lg) {
-    font-size: 2cqb;
+    font-size: 2.5rem;
   }
 
   @include respond-to(xl) {
@@ -151,9 +163,8 @@ h2 {
 }
 
 h3 {
-  font-family: $font-family;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.25rem;
   line-height: 1.167;
   letter-spacing: 0em;
 
@@ -171,7 +182,6 @@ h3 {
 }
 
 h4 {
-  font-family: $font-family;
   font-weight: 400;
   font-size: 1.525rem;
   line-height: 1.235;
@@ -191,7 +201,6 @@ h4 {
 }
 
 h5 {
-  font-family: $font-family;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.334;
@@ -211,7 +220,6 @@ h5 {
 }
 
 h6 {
-  font-family: $font-family;
   font-weight: 300;
   font-size: 1.25rem;
   line-height: 1.6;
@@ -231,7 +239,6 @@ h6 {
 }
 
 caption {
-  font-family: $font-family;
   font-weight: 400;
   font-size: 0.75rem;
   line-height: 1.66;
@@ -250,24 +257,25 @@ caption {
   }
 }
 
+// Button styles
 button {
-  font-family: $font-family;
+  height: 100%;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.75;
   letter-spacing: 0.02857em;
   text-transform: uppercase;
 
   @include respond-to(sm) {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   @include respond-to(lg) {
-    font-size: 0.8125rem;
+    font-size: 1.5rem;
   }
 
   @include respond-to(xl) {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   min-width: 150px;
@@ -283,17 +291,13 @@ button {
   border-radius: 0.9em;
   padding: 0.8em 1.2em 0.8em 1em;
   transition: all ease-in-out 0.2s;
-  font-family: $font-family;
-  font-size: 18px;
-  font-weight: 500;
   cursor: pointer; // Ensure a pointer cursor for buttons
-  transition: 400ms;
   outline: 3px #181717 solid;
   outline-offset: -3px;
-  color: white;
 
   &:hover {
     color: black;
+    background-color: transparent;
   }
 
   span {
@@ -301,9 +305,5 @@ button {
     justify-content: center;
     align-items: center;
     color: #fff;
-  }
-
-  &:hover {
-    background-color: transparent;
   }
 }

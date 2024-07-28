@@ -3,10 +3,11 @@
 /* Basic reset and box-sizing */
 * {
   margin: 0;
-  // padding: 0;
+  // padding: 0; // Commented out, as it might be useful to keep default padding in some cases
   box-sizing: border-box;
 }
 
+// Import SCSS partials
 @import "variables";
 @import "mixins";
 @import "global-theme";
@@ -24,7 +25,7 @@
 
 .container {
   display: grid;
-  grid-template-rows: auto 2fr 1fr auto;
+  grid-template-rows: auto;
   min-height: 100vh;
   grid-template-areas:
     "header"
@@ -34,7 +35,6 @@
   align-items: center;
   justify-items: center;
   width: 100%;
-
   margin: 0 auto;
   padding: spacing-constant(1) spacing-constant(2) spacing-constant(1)
     spacing-constant(2);
@@ -104,7 +104,7 @@
   width: 60vw;
   content: "";
   display: block;
-  border-top: 1px solid rgb(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   margin: 20px 0;
 }
 
@@ -203,20 +203,16 @@
     gap: 1.5rem;
     padding: 2rem 1rem 1rem 1rem;
   }
-
-  @include respond-to(xxl) {
-    // margin-left: 18rem;
-  }
 }
 
 .footer-link-copyright {
   text-decoration: none;
-  color: rgb(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .footer-link {
   text-decoration: none;
-  color: rgb(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .footer-link:hover {
@@ -239,15 +235,13 @@
 }
 
 .back-to-top-btn:hover .svgIcon {
-  /* width: 20px; */
-  transition-duration: 0.0s;
+  transition-duration: 0s;
   transform: translateY(200%);
 }
 
 .back-to-top-btn::before {
   content: "Nach oben";
   color: white;
-  /* transition-duration: .3s; */
   font-size: 0px;
 }
 
@@ -255,6 +249,5 @@
   font-size: 13px;
   opacity: 1;
   bottom: unset;
-  /* transform: translateY(-30px); */
   transition-duration: 0.3s;
 }

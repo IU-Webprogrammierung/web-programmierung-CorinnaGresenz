@@ -3,7 +3,14 @@ import $ from "jquery";
 $(document).ready(function () {
   console.log("jQuery is ready!");
 
-  // form logic
+  // Initialize form logic
+  initializeFormLogic();
+
+  // Initialize image gallery logic
+  initializeImageGalleryLogic();
+});
+
+function initializeFormLogic() {
   $("#submitButton").on("click", function () {
     submitContactForm();
   });
@@ -11,11 +18,12 @@ $(document).ready(function () {
   function submitContactForm() {
     alert("Das Kontaktformular wurde abgeschickt!");
   }
+}
 
-  // Image gallery logic
-  let modal = $("#myModal");
-  let slides = $(".slide");
-  let images = $(".image-gallery .figure .image");
+function initializeImageGalleryLogic() {
+  const modal = $("#myModal");
+  const slides = $(".slide");
+  const images = $(".image-gallery .figure .image");
   let slideIndex = 0;
 
   images.each(function (index) {
@@ -29,14 +37,6 @@ $(document).ready(function () {
     modal.css("display", "none");
   });
 
-  function showSlide(index) {
-    slides.each(function () {
-      $(this).removeClass("active");
-    });
-    slideIndex = index;
-    $(slides[slideIndex]).addClass("active");
-  }
-
   $(".next").on("click", function () {
     slideIndex = (slideIndex + 1) % slides.length;
     showSlide(slideIndex);
@@ -46,4 +46,12 @@ $(document).ready(function () {
     slideIndex = (slideIndex - 1 + slides.length) % slides.length;
     showSlide(slideIndex);
   });
-});
+
+  function showSlide(index) {
+    slides.each(function () {
+      $(this).removeClass("active");
+    });
+    slideIndex = index;
+    $(slides[slideIndex]).addClass("active");
+  }
+}

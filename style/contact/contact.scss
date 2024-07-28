@@ -16,7 +16,6 @@
 
 .main-form-container {
   margin-bottom: 4rem;
-  //responsvie design
   flex-direction: column;
   @include respond-to(lg) {
     flex-direction: row;
@@ -85,12 +84,10 @@
   width: 100%;
   border: none;
   outline: none;
-
   font-size: 1.5rem;
   @include respond-to(sm) {
     font-size: 1.2rem;
   }
-
   @include respond-to(xl) {
     font-size: 1.5rem;
   }
@@ -150,7 +147,6 @@
 .info-container h2 {
   font-weight: bold;
   text-decoration: underline;
-  // font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -182,7 +178,6 @@
   cursor: pointer;
   transition-duration: 0.3s;
   overflow: hidden;
-  // position: absolute;
 }
 
 .svgIcon {

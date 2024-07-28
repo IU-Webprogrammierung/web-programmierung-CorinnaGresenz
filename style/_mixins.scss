@@ -1,51 +1,44 @@
-// _mixins.scss
+// Import variables
+@import "variables";
 
-@import 'variables';
-
+// Function to calculate spacing based on a constant factor
 @function spacing-constant($factor) {
   @return #{$spacing-unit * $factor};
 }
 
+// Function to calculate spacing based on a dynamic function
 @function spacing-function($factor) {
   @return #{$spacing-function * $factor};
 }
 
+// Function to retrieve spacing from an array based on a factor
 @function spacing-array($factor) {
   @return nth($spacing-array, $factor + 1);
 }
 
+// Mixin for responsive breakpoints
 @mixin respond-to($breakpoint) {
-  @if $breakpoint ==xs {
+  @if $breakpoint == xs {
     @media (min-width: $breakpoint-xs) {
       @content;
     }
-  }
-
-  @else if $breakpoint ==sm {
+  } @else if $breakpoint == sm {
     @media (min-width: $breakpoint-sm) {
       @content;
     }
-  }
-
-  @else if $breakpoint ==md {
+  } @else if $breakpoint == md {
     @media (min-width: $breakpoint-md) {
       @content;
     }
-  }
-
-  @else if $breakpoint ==lg {
+  } @else if $breakpoint == lg {
     @media (min-width: $breakpoint-lg) {
       @content;
     }
-  }
-
-  @else if $breakpoint ==xl {
+  } @else if $breakpoint == xl {
     @media (min-width: $breakpoint-xl) {
       @content;
     }
-  }
-
-  @else if $breakpoint ==xxl {
+  } @else if $breakpoint == xxl {
     @media (min-width: $breakpoint-xxl) {
       @content;
     }
